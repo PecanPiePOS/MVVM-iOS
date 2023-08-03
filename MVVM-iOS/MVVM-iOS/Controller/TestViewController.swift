@@ -14,7 +14,7 @@ import Then
 final class TestViewController: UIViewController {
 
     private let testLabel = UILabel()
-    private let libraryTestModel = MyLibraryTest()
+    private let libraryTestModel = MyTestFile()
     
     override func viewDidLoad() {
         super.viewDidLoad()
