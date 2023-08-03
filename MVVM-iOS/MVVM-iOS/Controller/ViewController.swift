@@ -11,7 +11,7 @@ import MyLibrary
 import SnapKit
 import Then
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
     private let testLabel = UILabel()
     private let libraryTestModel = MyLibraryTest()
