@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		587048582A7B7AEA00813521 /* MyLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5870484C2A7B7AEA00813521 /* MyLibrary.swift */; };
 		587DF7272A7B6D34008D6CCC /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 587DF7262A7B6D34008D6CCC /* Then */; };
 		587DF72A2A7B6D40008D6CCC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 587DF7292A7B6D40008D6CCC /* SnapKit */; };
 		58E8E9752A7A412600898466 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E8E9742A7A412600898466 /* AppDelegate.swift */; };
@@ -20,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		587048522A7B7AEA00813521 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5870484E2A7B7AEA00813521 /* MyLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 587048382A7B7A4900813521;
+			remoteInfo = MyLibrary;
+		};
 		58E8E9882A7A412700898466 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 58E8E9692A7A412600898466 /* Project object */;
@@ -37,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5870484C2A7B7AEA00813521 /* MyLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLibrary.swift; sourceTree = "<group>"; };
+		5870484E2A7B7AEA00813521 /* MyLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = MyLibrary.xcodeproj; sourceTree = "<group>"; };
 		58E8E9712A7A412600898466 /* MVVM-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58E8E9742A7A412600898466 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58E8E9762A7A412600898466 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,9 +88,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		587048442A7B7AEA00813521 /* MyLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				5870484B2A7B7AEA00813521 /* MyLibrary */,
+				5870484E2A7B7AEA00813521 /* MyLibrary.xcodeproj */,
+			);
+			path = MyLibrary;
+			sourceTree = "<group>";
+		};
+		5870484B2A7B7AEA00813521 /* MyLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				5870484C2A7B7AEA00813521 /* MyLibrary.swift */,
+			);
+			path = MyLibrary;
+			sourceTree = "<group>";
+		};
+		5870484F2A7B7AEA00813521 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				587048532A7B7AEA00813521 /* libMyLibrary.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		58E8E9682A7A412600898466 = {
 			isa = PBXGroup;
 			children = (
+				587048442A7B7AEA00813521 /* MyLibrary */,
 				58E8E9732A7A412600898466 /* MVVM-iOS */,
 				58E8E98A2A7A412700898466 /* MVVM-iOSTests */,
 				58E8E9942A7A412700898466 /* MVVM-iOSUITests */,
@@ -250,6 +286,12 @@
 			);
 			productRefGroup = 58E8E9722A7A412600898466 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5870484F2A7B7AEA00813521 /* Products */;
+					ProjectRef = 5870484E2A7B7AEA00813521 /* MyLibrary.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				58E8E9702A7A412600898466 /* MVVM-iOS */,
@@ -258,6 +300,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		587048532A7B7AEA00813521 /* libMyLibrary.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMyLibrary.a;
+			remoteRef = 587048522A7B7AEA00813521 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		58E8E96F2A7A412600898466 /* Resources */ = {
@@ -291,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58E8E9792A7A412600898466 /* ViewController.swift in Sources */,
+				587048582A7B7AEA00813521 /* MyLibrary.swift in Sources */,
 				58E8E9752A7A412600898466 /* AppDelegate.swift in Sources */,
 				58E8E9772A7A412600898466 /* SceneDelegate.swift in Sources */,
 			);
