@@ -12,7 +12,7 @@ public protocol PhotoAlbumViewModelInputs {
     func photoCellTapped()
     
     /// Call when the images are updated.
-    func photosUpdated()
+    func updatePhotos()
     
     /// Call when the view should be refreshed.
     func refresh()
@@ -41,7 +41,7 @@ public protocol PhotoAlbumViewModelType {
 public final class PhotoAlbumViewModel: PhotoAlbumViewModelType, PhotoAlbumViewModelInputs, PhotoAlbumViewModelOutputs {
     
     /// 어떤 이유로..? 왜 self 를 리턴하지?
-    /// => 그 이유는, 
+    /// => 그 이유는, 해당 VM 에서 사용된 각자의 Protocol 에서 정의된 func 만 떼어내 사용할 수 있다.
     public var inputs: PhotoAlbumViewModelInputs { return self }
     public var outputs: PhotoAlbumViewModelOutputs { return self }
     
@@ -49,7 +49,7 @@ public final class PhotoAlbumViewModel: PhotoAlbumViewModelType, PhotoAlbumViewM
         
     }
     
-    public func photosUpdated() {
+    public func updatePhotos() {
         
     }
     

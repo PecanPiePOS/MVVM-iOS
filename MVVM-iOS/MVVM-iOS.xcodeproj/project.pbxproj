@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		580C28072A80B1FA00619A31 /* References.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C28062A80B1FA00619A31 /* References.swift */; };
 		5870485B2A7B8EF100813521 /* PhotoAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5870485A2A7B8EF100813521 /* PhotoAlbumViewController.swift */; };
 		587048612A7B907500813521 /* MyTestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587048602A7B907500813521 /* MyTestFile.swift */; };
 		587048632A7B911B00813521 /* PhotoAlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587048622A7B911B00813521 /* PhotoAlbumViewModel.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		580C28062A80B1FA00619A31 /* References.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = References.swift; sourceTree = "<group>"; };
 		5870484E2A7B7AEA00813521 /* MyLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = MyLibrary.xcodeproj; sourceTree = "<group>"; };
 		5870485A2A7B8EF100813521 /* PhotoAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumViewController.swift; sourceTree = "<group>"; };
 		587048602A7B907500813521 /* MyTestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTestFile.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			children = (
 				58E8E9D42A7A49BD00898466 /* AppSources */,
 				58E8E9A52A7A447000898466 /* Controller */,
+				580C28062A80B1FA00619A31 /* References.swift */,
 			);
 			path = "MVVM-iOS";
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				580C28072A80B1FA00619A31 /* References.swift in Sources */,
 				58E8E9792A7A412600898466 /* TestViewController.swift in Sources */,
 				58E8E9752A7A412600898466 /* AppDelegate.swift in Sources */,
 				5870485B2A7B8EF100813521 /* PhotoAlbumViewController.swift in Sources */,
