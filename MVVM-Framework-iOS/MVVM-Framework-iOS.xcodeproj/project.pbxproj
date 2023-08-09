@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		583B18282A8400C0000D1AB4 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 583B18272A8400C0000D1AB4 /* RxCocoa */; };
+		583B182A2A8400C0000D1AB4 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 583B18292A8400C0000D1AB4 /* RxRelay */; };
+		583B182C2A8400C0000D1AB4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 583B182B2A8400C0000D1AB4 /* RxSwift */; };
+		583B18302A84018A000D1AB4 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 583B182F2A84018A000D1AB4 /* RxTest */; };
+		583B18322A84018F000D1AB4 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 583B18312A84018F000D1AB4 /* RxTest */; };
 		5863DE362A83D0C500408513 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5863DE352A83D0C500408513 /* AppDelegate.swift */; };
 		5863DE382A83D0C500408513 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5863DE372A83D0C500408513 /* SceneDelegate.swift */; };
 		5863DE3A2A83D0C500408513 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5863DE392A83D0C500408513 /* ViewController.swift */; };
@@ -15,6 +20,10 @@
 		5863DE4D2A83D0C600408513 /* MVVM_Framework_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5863DE4C2A83D0C600408513 /* MVVM_Framework_iOSTests.swift */; };
 		5863DE572A83D0C600408513 /* MVVM_Framework_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5863DE562A83D0C600408513 /* MVVM_Framework_iOSUITests.swift */; };
 		5863DE592A83D0C600408513 /* MVVM_Framework_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5863DE582A83D0C600408513 /* MVVM_Framework_iOSUITestsLaunchTests.swift */; };
+		58FA94F92A83DF64008BBE4F /* MyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FA94F62A83DF57008BBE4F /* MyFramework.framework */; };
+		58FA94FA2A83DF64008BBE4F /* MyFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 58FA94F62A83DF57008BBE4F /* MyFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		58FA95072A83DF88008BBE4F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 58FA95062A83DF88008BBE4F /* SnapKit */; };
+		58FA950A2A83DF93008BBE4F /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 58FA95092A83DF93008BBE4F /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +41,35 @@
 			remoteGlobalIDString = 5863DE312A83D0C500408513;
 			remoteInfo = "MVVM-Framework-iOS";
 		};
+		58FA94F52A83DF57008BBE4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58FA94F02A83DF57008BBE4F /* MyFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58FA94D52A83DEE7008BBE4F;
+			remoteInfo = MyFramework;
+		};
+		58FA94F72A83DF57008BBE4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58FA94F02A83DF57008BBE4F /* MyFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58FA94DD2A83DEE7008BBE4F;
+			remoteInfo = MyFrameworkTests;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		58FA94FB2A83DF64008BBE4F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				58FA94FA2A83DF64008BBE4F /* MyFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5863DE322A83D0C500408513 /* MVVM-Framework-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-Framework-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +84,7 @@
 		5863DE522A83D0C600408513 /* MVVM-Framework-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVVM-Framework-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5863DE562A83D0C600408513 /* MVVM_Framework_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_Framework_iOSUITests.swift; sourceTree = "<group>"; };
 		5863DE582A83D0C600408513 /* MVVM_Framework_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_Framework_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		58FA94F02A83DF57008BBE4F /* MyFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MyFramework.xcodeproj; path = ../MyFramework/MyFramework.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +92,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				583B182C2A8400C0000D1AB4 /* RxSwift in Frameworks */,
+				583B182A2A8400C0000D1AB4 /* RxRelay in Frameworks */,
+				58FA950A2A83DF93008BBE4F /* Then in Frameworks */,
+				58FA95072A83DF88008BBE4F /* SnapKit in Frameworks */,
+				583B18282A8400C0000D1AB4 /* RxCocoa in Frameworks */,
+				58FA94F92A83DF64008BBE4F /* MyFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				583B18302A84018A000D1AB4 /* RxTest in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				583B18322A84018F000D1AB4 /* RxTest in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +123,7 @@
 		5863DE292A83D0C500408513 = {
 			isa = PBXGroup;
 			children = (
+				58FA94EF2A83DF57008BBE4F /* Frameworks */,
 				5863DE342A83D0C500408513 /* MVVM-Framework-iOS */,
 				5863DE4B2A83D0C600408513 /* MVVM-Framework-iOSTests */,
 				5863DE552A83D0C600408513 /* MVVM-Framework-iOSUITests */,
@@ -148,6 +195,23 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		58FA94EF2A83DF57008BBE4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58FA94F02A83DF57008BBE4F /* MyFramework.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58FA94F12A83DF57008BBE4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				58FA94F62A83DF57008BBE4F /* MyFramework.framework */,
+				58FA94F82A83DF57008BBE4F /* MyFrameworkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,12 +222,20 @@
 				5863DE2E2A83D0C500408513 /* Sources */,
 				5863DE2F2A83D0C500408513 /* Frameworks */,
 				5863DE302A83D0C500408513 /* Resources */,
+				58FA94FB2A83DF64008BBE4F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "MVVM-Framework-iOS";
+			packageProductDependencies = (
+				58FA95062A83DF88008BBE4F /* SnapKit */,
+				58FA95092A83DF93008BBE4F /* Then */,
+				583B18272A8400C0000D1AB4 /* RxCocoa */,
+				583B18292A8400C0000D1AB4 /* RxRelay */,
+				583B182B2A8400C0000D1AB4 /* RxSwift */,
+			);
 			productName = "MVVM-Framework-iOS";
 			productReference = 5863DE322A83D0C500408513 /* MVVM-Framework-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -182,6 +254,9 @@
 				5863DE4A2A83D0C600408513 /* PBXTargetDependency */,
 			);
 			name = "MVVM-Framework-iOSTests";
+			packageProductDependencies = (
+				583B182F2A84018A000D1AB4 /* RxTest */,
+			);
 			productName = "MVVM-Framework-iOSTests";
 			productReference = 5863DE482A83D0C600408513 /* MVVM-Framework-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -200,6 +275,9 @@
 				5863DE542A83D0C600408513 /* PBXTargetDependency */,
 			);
 			name = "MVVM-Framework-iOSUITests";
+			packageProductDependencies = (
+				583B18312A84018F000D1AB4 /* RxTest */,
+			);
 			productName = "MVVM-Framework-iOSUITests";
 			productReference = 5863DE522A83D0C600408513 /* MVVM-Framework-iOSUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -236,8 +314,19 @@
 				Base,
 			);
 			mainGroup = 5863DE292A83D0C500408513;
+			packageReferences = (
+				58FA95052A83DF88008BBE4F /* XCRemoteSwiftPackageReference "SnapKit" */,
+				58FA95082A83DF93008BBE4F /* XCRemoteSwiftPackageReference "Then" */,
+				583B18262A8400C0000D1AB4 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 5863DE332A83D0C500408513 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 58FA94F12A83DF57008BBE4F /* Products */;
+					ProjectRef = 58FA94F02A83DF57008BBE4F /* MyFramework.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				5863DE312A83D0C500408513 /* MVVM-Framework-iOS */,
@@ -246,6 +335,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		58FA94F62A83DF57008BBE4F /* MyFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MyFramework.framework;
+			remoteRef = 58FA94F52A83DF57008BBE4F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		58FA94F82A83DF57008BBE4F /* MyFrameworkTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MyFrameworkTests.xctest;
+			remoteRef = 58FA94F72A83DF57008BBE4F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5863DE302A83D0C500408513 /* Resources */ = {
@@ -364,6 +470,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -424,6 +531,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -622,6 +730,71 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		583B18262A8400C0000D1AB4 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		58FA95052A83DF88008BBE4F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		58FA95082A83DF93008BBE4F /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		583B18272A8400C0000D1AB4 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 583B18262A8400C0000D1AB4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		583B18292A8400C0000D1AB4 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 583B18262A8400C0000D1AB4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		583B182B2A8400C0000D1AB4 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 583B18262A8400C0000D1AB4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		583B182F2A84018A000D1AB4 /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 583B18262A8400C0000D1AB4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		583B18312A84018F000D1AB4 /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 583B18262A8400C0000D1AB4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		58FA95062A83DF88008BBE4F /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58FA95052A83DF88008BBE4F /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		58FA95092A83DF93008BBE4F /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58FA95082A83DF93008BBE4F /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5863DE2A2A83D0C500408513 /* Project object */;
 }
