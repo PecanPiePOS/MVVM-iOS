@@ -7,6 +7,9 @@
 
 import UIKit
 
+import RxSwift
+import RxCocoa
+
 public protocol PhotoAlbumViewModelInputs {
     /// Call when the indivisual cell is tapped.
     func photoCellTapped()

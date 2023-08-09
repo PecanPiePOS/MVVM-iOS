@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		580C28072A80B1FA00619A31 /* References.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C28062A80B1FA00619A31 /* References.swift */; };
+		5844BB072A82AC80002FFCF5 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 5844BB062A82AC80002FFCF5 /* RxCocoa */; };
+		5844BB092A82AC80002FFCF5 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 5844BB082A82AC80002FFCF5 /* RxRelay */; };
+		5844BB0B2A82AC80002FFCF5 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5844BB0A2A82AC80002FFCF5 /* RxSwift */; };
+		5844BB0D2A82AC80002FFCF5 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 5844BB0C2A82AC80002FFCF5 /* RxTest */; };
 		5870485B2A7B8EF100813521 /* PhotoAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5870485A2A7B8EF100813521 /* PhotoAlbumViewController.swift */; };
 		587048612A7B907500813521 /* MyTestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587048602A7B907500813521 /* MyTestFile.swift */; };
 		587048632A7B911B00813521 /* PhotoAlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587048622A7B911B00813521 /* PhotoAlbumViewModel.swift */; };
@@ -72,7 +76,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5844BB072A82AC80002FFCF5 /* RxCocoa in Frameworks */,
 				587DF7272A7B6D34008D6CCC /* Then in Frameworks */,
+				5844BB0B2A82AC80002FFCF5 /* RxSwift in Frameworks */,
+				5844BB092A82AC80002FFCF5 /* RxRelay in Frameworks */,
+				5844BB0D2A82AC80002FFCF5 /* RxTest in Frameworks */,
 				587DF72A2A7B6D40008D6CCC /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +102,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5844BB172A82B02E002FFCF5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		587048442A7B7AEA00813521 /* MyLibrary */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +143,7 @@
 				58E8E98A2A7A412700898466 /* MVVM-iOSTests */,
 				58E8E9942A7A412700898466 /* MVVM-iOSUITests */,
 				58E8E9722A7A412600898466 /* Products */,
+				5844BB172A82B02E002FFCF5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -208,6 +224,10 @@
 			packageProductDependencies = (
 				587DF7262A7B6D34008D6CCC /* Then */,
 				587DF7292A7B6D40008D6CCC /* SnapKit */,
+				5844BB062A82AC80002FFCF5 /* RxCocoa */,
+				5844BB082A82AC80002FFCF5 /* RxRelay */,
+				5844BB0A2A82AC80002FFCF5 /* RxSwift */,
+				5844BB0C2A82AC80002FFCF5 /* RxTest */,
 			);
 			productName = "MVVM-iOS";
 			productReference = 58E8E9712A7A412600898466 /* MVVM-iOS.app */;
@@ -284,6 +304,7 @@
 			packageReferences = (
 				587DF7252A7B6D34008D6CCC /* XCRemoteSwiftPackageReference "Then" */,
 				587DF7282A7B6D40008D6CCC /* XCRemoteSwiftPackageReference "SnapKit" */,
+				5844BB052A82AC80002FFCF5 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 58E8E9722A7A412600898466 /* Products */;
 			projectDirPath = "";
@@ -433,6 +454,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -493,6 +515,8 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -703,6 +727,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5844BB052A82AC80002FFCF5 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 		587DF7252A7B6D34008D6CCC /* XCRemoteSwiftPackageReference "Then" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/Then";
@@ -722,6 +754,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5844BB062A82AC80002FFCF5 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5844BB052A82AC80002FFCF5 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		5844BB082A82AC80002FFCF5 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5844BB052A82AC80002FFCF5 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		5844BB0A2A82AC80002FFCF5 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5844BB052A82AC80002FFCF5 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		5844BB0C2A82AC80002FFCF5 /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5844BB052A82AC80002FFCF5 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
 		587DF7262A7B6D34008D6CCC /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 587DF7252A7B6D34008D6CCC /* XCRemoteSwiftPackageReference "Then" */;
