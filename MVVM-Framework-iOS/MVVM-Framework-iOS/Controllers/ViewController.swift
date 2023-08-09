@@ -6,14 +6,16 @@
 //
 
 import UIKit
+import MyFramework
 
 class ViewController: UIViewController {
 
+    private var customClass = FrameworkTestClass()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .purple
     }
-
 
 }
 
