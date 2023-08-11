@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		581428592A86796800949CCD /* PhotoAlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581428582A86796800949CCD /* PhotoAlbumViewModel.swift */; };
 		583B18352A8402F9000D1AB4 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 583B18342A8402F9000D1AB4 /* RxCocoa */; };
 		583B18372A8402F9000D1AB4 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 583B18362A8402F9000D1AB4 /* RxRelay */; };
 		583B18392A8402F9000D1AB4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 583B18382A8402F9000D1AB4 /* RxSwift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		581428582A86796800949CCD /* PhotoAlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumViewModel.swift; sourceTree = "<group>"; };
 		58FA94D52A83DEE7008BBE4F /* MyFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58FA94D82A83DEE7008BBE4F /* MyFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFramework.h; sourceTree = "<group>"; };
 		58FA94DD2A83DEE7008BBE4F /* MyFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		581428572A86793A00949CCD /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				581428582A86796800949CCD /* PhotoAlbumViewModel.swift */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
 		583B183A2A840306000D1AB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +78,7 @@
 		58FA94CB2A83DEE7008BBE4F = {
 			isa = PBXGroup;
 			children = (
+				581428572A86793A00949CCD /* Library */,
 				58FA94D72A83DEE7008BBE4F /* MyFramework */,
 				58FA94E12A83DEE7008BBE4F /* MyFrameworkTests */,
 				58FA94D62A83DEE7008BBE4F /* Products */,
@@ -223,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58FA94EE2A83DEF9008BBE4F /* TestFramework.swift in Sources */,
+				581428592A86796800949CCD /* PhotoAlbumViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
