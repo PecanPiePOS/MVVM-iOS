@@ -8,9 +8,12 @@
 import UIKit
 
 import RxSwift
-import RxRelay
+import RxCocoa
+
+/// 이게 POP 구나.
 
 public protocol PhotoAlbumViewModelInputs {
+    
     /// Call when the indivisual cell is tapped.
     func photoCellTapped()
 
@@ -32,6 +35,8 @@ public protocol PhotoAlbumViewModelInputs {
 
 public protocol PhotoAlbumViewModelOutputs {
     // OUTPUTS using RxSwifts
+    var photoAlbumLists: PublishSubject<[PhotoModel]> { get }
+    
 }
 
 public protocol PhotoAlbumViewModelType {
@@ -41,6 +46,12 @@ public protocol PhotoAlbumViewModelType {
 
 public final class PhotoAlbumViewModel: PhotoAlbumViewModelType, PhotoAlbumViewModelInputs, PhotoAlbumViewModelOutputs {
     
+    public var photoAlbumLists: PublishSubject<[PhotoModel]> =
+    PublishSubject()
+    
+    
+    
+    private var disposeBag: DisposeBag = DisposeBag()
     
     public var inputs: PhotoAlbumViewModelInputs { return self }
     public var outputs: PhotoAlbumViewModelOutputs { return self }
