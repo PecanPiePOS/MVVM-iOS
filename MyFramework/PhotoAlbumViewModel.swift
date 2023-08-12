@@ -85,8 +85,8 @@ public final class PhotoAlbumViewModel: PhotoAlbumViewModelType, PhotoAlbumViewM
     }
     
     public func refresh() {
-//        let newRandomImageArray: [String] = selectRandomImageName(from: imageNumberArray, count: 4, remaining: &remainingImageNumberArray, registered: &registeredImageNumberArray)
-//        photoAlbumLists.onNext(newRandomImageArray)
+        let newRandomImageArray: [String] = selectRandomImageName(from: imageNumberArray, count: 4, remaining: &remainingImageNumberArray, registered: &registeredImageNumberArray)
+        photoAlbumLists.onNext(newRandomImageArray)
     }
     
     /// Does it need new Custom Control?? Rx...
