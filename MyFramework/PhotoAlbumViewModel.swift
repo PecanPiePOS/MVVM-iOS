@@ -98,27 +98,27 @@ public final class PhotoAlbumViewModel: PhotoAlbumViewModelType, PhotoAlbumViewM
 }
 
 extension PhotoAlbumViewModel {
-//    private func selectRandomImageName<T: Hashable>(from array: [T], count k: Int, remaining remainingArray: inout [T], registered registeredArray: inout [T]) -> [String] {
-//        var dictionary: [Int: T] = [:]
-//        var resultIntArray: [T] = []
-//        var resultArray: [String] = []
-//
-//        for (index, item) in array.enumerated() {
-//            dictionary[index] = item
-//        }
-//
-//        for _ in 0..<k {
-//            guard let randomKey = dictionary.keys.randomElement(), let randomValue = dictionary[randomKey] else { return [] }
-//            let imageName = "IMG_\(randomValue)"
-//            resultIntArray.append(randomValue)
-//            resultArray.append(imageName)
-//            dictionary[randomKey] = nil
-//        }
-//
-//        registeredArray = resultIntArray
-//        remainingArray = Array(dictionary.values)
-//        return resultArray
-//    }
+    private func selectRandomImageName<T: Hashable>(from array: [T], count k: Int, remaining remainingArray: inout [T], registered registeredArray: inout [T]) -> [String] {
+        var dictionary: [Int: T] = [:]
+        var resultIntArray: [T] = []
+        var resultArray: [String] = []
+
+        for (index, item) in array.enumerated() {
+            dictionary[index] = item
+        }
+
+        for _ in 0..<k {
+            guard let randomKey = dictionary.keys.randomElement(), let randomValue = dictionary[randomKey] else { return [] }
+            let imageName = "IMG_\(randomValue)"
+            resultIntArray.append(randomValue)
+            resultArray.append(imageName)
+            dictionary[randomKey] = nil
+        }
+
+        registeredArray = resultIntArray
+        remainingArray = Array(dictionary.values)
+        return resultArray
+    }
 }
 
 //fileprivate func getRandomImageData() -> [PhotoModel] {
@@ -127,10 +127,10 @@ extension PhotoAlbumViewModel {
 //}
 
 fileprivate func convertIntToStringArray(from intArrray: [Int]) -> [String] {
-//    var resultStringArray: [String] = []
-//    intArrray.forEach {
-//        let imageName = "IMG_\($0)"
-//        resultStringArray.append(imageName)
-//    }
-//    return resultStringArray
+    var resultStringArray: [String] = []
+    intArrray.forEach {
+        let imageName = "IMG_\($0)"
+        resultStringArray.append(imageName)
+    }
+    return resultStringArray
 }
