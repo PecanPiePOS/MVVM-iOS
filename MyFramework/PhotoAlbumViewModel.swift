@@ -72,16 +72,16 @@ public final class PhotoAlbumViewModel: PhotoAlbumViewModelType, PhotoAlbumViewM
 //    public func photoCellTapped() {}
     
     public func updatePhotos(index: Int) {
-//        var randomImageArray: [Int] = self.remainingImageNumberArray.shuffled()
-//        let newImageNumber = randomImageArray.removeLast()
-//        let removedImageNumber: Int = registeredImageNumberArray[index]
-//
-//        registeredImageNumberArray[index] = newImageNumber
-//        randomImageArray.append(removedImageNumber)
-//        self.remainingImageNumberArray = randomImageArray
-//        let updatedNewArray = convertIntToStringArray(from: self.remainingImageNumberArray)
-//
-//        photoAlbumLists.onNext(updatedNewArray)
+        var randomImageArray: [Int] = self.remainingImageNumberArray.shuffled()
+        let newImageNumber = randomImageArray.removeLast()
+        let removedImageNumber: Int = registeredImageNumberArray[index]
+
+        registeredImageNumberArray[index] = newImageNumber
+        randomImageArray.append(removedImageNumber)
+        self.remainingImageNumberArray = randomImageArray
+        let updatedNewArray = convertIntToStringArray(from: self.remainingImageNumberArray)
+
+        photoAlbumLists.onNext(updatedNewArray)
     }
     
     public func refresh() {
