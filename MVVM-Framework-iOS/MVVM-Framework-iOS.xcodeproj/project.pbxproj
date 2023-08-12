@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5804ADB32A87D1CB00CA66C5 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5804ADB22A87D1CB00CA66C5 /* PhotoCell.swift */; };
+		5804ADB52A87D1DB00CA66C5 /* DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5804ADB42A87D1DB00CA66C5 /* DTO.swift */; };
 		583B18282A8400C0000D1AB4 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 583B18272A8400C0000D1AB4 /* RxCocoa */; };
 		583B182A2A8400C0000D1AB4 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 583B18292A8400C0000D1AB4 /* RxRelay */; };
 		583B182C2A8400C0000D1AB4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 583B182B2A8400C0000D1AB4 /* RxSwift */; };
@@ -72,6 +74,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5804ADB22A87D1CB00CA66C5 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		5804ADB42A87D1DB00CA66C5 /* DTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTO.swift; sourceTree = "<group>"; };
 		5863DE322A83D0C500408513 /* MVVM-Framework-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-Framework-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5863DE352A83D0C500408513 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5863DE372A83D0C500408513 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +124,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5804ADB02A87D1A600CA66C5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5804ADB22A87D1CB00CA66C5 /* PhotoCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5804ADB12A87D1AF00CA66C5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5804ADB42A87D1DB00CA66C5 /* DTO.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		5863DE292A83D0C500408513 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +164,8 @@
 		5863DE342A83D0C500408513 /* MVVM-Framework-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				5804ADB12A87D1AF00CA66C5 /* Models */,
+				5804ADB02A87D1A600CA66C5 /* Views */,
 				5863DE672A83D10A00408513 /* AppDelegate */,
 				5863DE682A83D11D00408513 /* Resources */,
 				5863DE692A83D12B00408513 /* Controllers */,
@@ -384,9 +406,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5804ADB32A87D1CB00CA66C5 /* PhotoCell.swift in Sources */,
 				5863DE3A2A83D0C500408513 /* ViewController.swift in Sources */,
 				5863DE362A83D0C500408513 /* AppDelegate.swift in Sources */,
 				5863DE382A83D0C500408513 /* SceneDelegate.swift in Sources */,
+				5804ADB52A87D1DB00CA66C5 /* DTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
