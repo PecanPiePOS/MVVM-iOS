@@ -44,8 +44,9 @@ extension HomeViewController {
             .disposed(by: disposeBag)
         
         self.refreshButton.rx.tap
-            .bind {
-                self.viewModel.inputs.refresh()
+            .bind { [weak self] in
+                let vc = TestViewController()
+                self?.navigationController?.pushViewController(vc, animated: true)
             }
             .disposed(by: disposeBag)
         
@@ -58,7 +59,8 @@ extension HomeViewController {
         view.backgroundColor = .orange
         
         refreshButton.do {
-            $0.setImage(UIImage(systemName: "arrow.clockwise.circle.fill"), for: .normal)
+            let symbolCofiguration = UIImage.SymbolConfiguration(pointSize: 30, weight: .bold)
+            $0.setImage(UIImage(systemName: "arrow.clockwise.circle.fill", withConfiguration: symbolCofiguration), for: .normal)
             $0.tintColor = .white
         }
         
