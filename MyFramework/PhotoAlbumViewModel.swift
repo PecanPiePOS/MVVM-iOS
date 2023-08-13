@@ -55,37 +55,39 @@ public final class PhotoAlbumViewModel: PhotoAlbumViewModelType, PhotoAlbumViewM
     private var registeredImageNumberArray: [Int] = []
     private var remainingImageNumberArray: [Int] = []
     
-    public var photoAlbumLists: BehaviorSubject<[String]> {
-        let randomPhoto = selectRandomImageName(from: imageNumberArray,
-                                                count: 4,
-                                                remaining: &remainingImageNumberArray,
-                                                registered: &registeredImageNumberArray)
-        let subject: BehaviorSubject<[String]> = BehaviorSubject(value: randomPhoto)
-        return subject
-    }
+    public var photoAlbumLists: BehaviorSubject<[String]> = BehaviorSubject(value: [])
     
     private var disposeBag: DisposeBag = DisposeBag()
     
     public var inputs: PhotoAlbumViewModelInputs { return self }
     public var outputs: PhotoAlbumViewModelOutputs { return self }
     
+    public init() {
+        let randomPhoto = selectRandomImageName(from: imageNumberArray,
+                                                count: 4,
+                                                remaining: remainingImageNumberArray,
+                                                registered: registeredImageNumberArray)
+        photoAlbumLists.onNext(randomPhoto)
+        self.photoAlbumLists.onCompleted()
+    }
 //    public func photoCellTapped() {}
     
     public func updatePhotos(index: Int) {
         var randomImageArray: [Int] = self.remainingImageNumberArray.shuffled()
         let newImageNumber = randomImageArray.removeLast()
-        let removedImageNumber: Int = registeredImageNumberArray[index]
+        let removedImageNumber: Int = self.registeredImageNumberArray[index]
 
-        registeredImageNumberArray[index] = newImageNumber
+        self.registeredImageNumberArray[index] = newImageNumber
         randomImageArray.append(removedImageNumber)
         self.remainingImageNumberArray = randomImageArray
-        let updatedNewArray = convertIntToStringArray(from: self.remainingImageNumberArray)
-
+        let updatedNewArray = convertIntToStringArray(from: self.registeredImageNumberArray)
+        
         photoAlbumLists.onNext(updatedNewArray)
     }
     
     public func refresh() {
-        let newRandomImageArray: [String] = selectRandomImageName(from: imageNumberArray, count: 4, remaining: &remainingImageNumberArray, registered: &registeredImageNumberArray)
+        let newRandomImageArray: [String] = selectRandomImageName(from: imageNumberArray, count: 4, remaining: remainingImageNumberArray, registered: registeredImageNumberArray)
+        
         photoAlbumLists.onNext(newRandomImageArray)
     }
     
@@ -98,9 +100,9 @@ public final class PhotoAlbumViewModel: PhotoAlbumViewModelType, PhotoAlbumViewM
 }
 
 extension PhotoAlbumViewModel {
-    private func selectRandomImageName<T: Hashable>(from array: [T], count k: Int, remaining remainingArray: inout [T], registered registeredArray: inout [T]) -> [String] {
-        var dictionary: [Int: T] = [:]
-        var resultIntArray: [T] = []
+    private func selectRandomImageName(from array: [Int], count k: Int, remaining remainingArray: [Int], registered registeredArray: [Int]) -> [String] {
+        var dictionary: [Int: Int] = [:]
+        var resultIntArray: [Int] = []
         var resultArray: [String] = []
 
         for (index, item) in array.enumerated() {
@@ -115,22 +117,21 @@ extension PhotoAlbumViewModel {
             dictionary[randomKey] = nil
         }
 
-        registeredArray = resultIntArray
-        remainingArray = Array(dictionary.values)
+        self.registeredImageNumberArray = resultIntArray
+        self.remainingImageNumberArray = Array(dictionary.values)
         return resultArray
     }
-}
-
-//fileprivate func getRandomImageData() -> [PhotoModel] {
-//    var exifData: CFDictionary? = nil
-//
-//}
-
-fileprivate func convertIntToStringArray(from intArrray: [Int]) -> [String] {
-    var resultStringArray: [String] = []
-    intArrray.forEach {
-        let imageName = "IMG_\($0)"
-        resultStringArray.append(imageName)
+    
+    private func convertIntToStringArray(from intArrray: [Int]) -> [String] {
+        var resultStringArray: [String] = []
+        intArrray.forEach {
+            let imageName = "IMG_\($0)"
+            resultStringArray.append(imageName)
+        }
+        return resultStringArray
     }
-    return resultStringArray
+    
+    func fgfg () {
+        self.photoAlbumLists.onCompleted()
+    }
 }
