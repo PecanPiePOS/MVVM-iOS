@@ -7,23 +7,31 @@
 
 import UIKit
 
-class TestRootViewController: UIViewController {
+import SnapKit
+import Then
 
+final class TestRootViewController: UIViewController {
+
+    private lazy var toHomeButton = UIButton(frame: .zero, primaryAction: UIAction(handler: { [weak self] _ in
+        let vc = HomeViewController()
+        self?.navigationController?.pushViewController(vc, animated: true)
+    }))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .yellow
+        
+        toHomeButton.do {
+            let configuration = UIImage.SymbolConfiguration(pointSize: 50, weight: .semibold)
+            $0.tintColor = .purple
+            $0.setImage(UIImage(systemName: "house", withConfiguration: configuration), for: .normal)
+        }
+        
+        view.addSubview(toHomeButton)
+        
+        toHomeButton.snp.makeConstraints {
+            $0.size.equalTo(100)
+            $0.center.equalToSuperview()
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

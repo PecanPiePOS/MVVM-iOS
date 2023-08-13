@@ -68,7 +68,6 @@ public final class PhotoAlbumViewModel: PhotoAlbumViewModelType, PhotoAlbumViewM
                                                 remaining: remainingImageNumberArray,
                                                 registered: registeredImageNumberArray)
         photoAlbumLists.onNext(randomPhoto)
-        self.photoAlbumLists.onCompleted()
     }
 //    public func photoCellTapped() {}
     
@@ -129,9 +128,5 @@ extension PhotoAlbumViewModel {
             resultStringArray.append(imageName)
         }
         return resultStringArray
-    }
-    
-    func fgfg () {
-        self.photoAlbumLists.onCompleted()
     }
 }

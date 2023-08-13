@@ -23,6 +23,8 @@
 		5863DE592A83D0C600408513 /* MVVM_Framework_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5863DE582A83D0C600408513 /* MVVM_Framework_iOSUITestsLaunchTests.swift */; };
 		587B6F172A889A71000840D1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B6F162A889A71000840D1 /* HomeViewController.swift */; };
 		587B6F1C2A88E570000840D1 /* PhotoCellCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B6F1B2A88E570000840D1 /* PhotoCellCircleView.swift */; };
+		587B6F1E2A88F4C4000840D1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B6F1D2A88F4C4000840D1 /* TestViewController.swift */; };
+		587B6F202A88F672000840D1 /* TestRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B6F1F2A88F672000840D1 /* TestRootViewController.swift */; };
 		58FA94F92A83DF64008BBE4F /* MyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FA94F62A83DF57008BBE4F /* MyFramework.framework */; };
 		58FA94FA2A83DF64008BBE4F /* MyFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 58FA94F62A83DF57008BBE4F /* MyFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		58FA95072A83DF88008BBE4F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 58FA95062A83DF88008BBE4F /* SnapKit */; };
@@ -90,6 +92,8 @@
 		5863DE582A83D0C600408513 /* MVVM_Framework_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_Framework_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		587B6F162A889A71000840D1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		587B6F1B2A88E570000840D1 /* PhotoCellCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCellCircleView.swift; sourceTree = "<group>"; };
+		587B6F1D2A88F4C4000840D1 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		587B6F1F2A88F672000840D1 /* TestRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRootViewController.swift; sourceTree = "<group>"; };
 		58FA94F02A83DF57008BBE4F /* MyFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MyFramework.xcodeproj; path = ../MyFramework/MyFramework.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -216,6 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				587B6F162A889A71000840D1 /* HomeViewController.swift */,
+				587B6F1D2A88F4C4000840D1 /* TestViewController.swift */,
+				587B6F1F2A88F672000840D1 /* TestRootViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -409,7 +415,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				587B6F1E2A88F4C4000840D1 /* TestViewController.swift in Sources */,
 				5804ADB32A87D1CB00CA66C5 /* PhotoCell.swift in Sources */,
+				587B6F202A88F672000840D1 /* TestRootViewController.swift in Sources */,
 				5863DE362A83D0C500408513 /* AppDelegate.swift in Sources */,
 				5863DE382A83D0C500408513 /* SceneDelegate.swift in Sources */,
 				5804ADB52A87D1DB00CA66C5 /* DTO.swift in Sources */,
@@ -655,6 +663,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.KyuboShim.MVVM-Framework-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -675,6 +686,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.KyuboShim.MVVM-Framework-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -693,6 +707,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.KyuboShim.MVVM-Framework-iOSUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -711,6 +728,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.KyuboShim.MVVM-Framework-iOSUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
