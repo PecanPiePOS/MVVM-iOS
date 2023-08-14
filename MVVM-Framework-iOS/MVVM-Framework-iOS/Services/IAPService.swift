@@ -46,6 +46,11 @@ final class IAPServie: NSObject {
     }
 }
 
+    /**
+     `SKProductsRequestDelegate` 주의할 점:
+     - Warning
+     - Responses received by the SKProductsRequestDelegate may not be returned on a specific thread. If you make assumptions about which queue will handle delegate responses, you may encounter unintended performance and compatibility issues in the future.
+     */
 extension IAPServie: SKProductsRequestDelegate {
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         if !response.products.isEmpty {
