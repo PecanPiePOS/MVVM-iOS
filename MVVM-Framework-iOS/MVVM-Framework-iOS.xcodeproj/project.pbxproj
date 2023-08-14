@@ -11,6 +11,7 @@
 		5804ADB52A87D1DB00CA66C5 /* DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5804ADB42A87D1DB00CA66C5 /* DTO.swift */; };
 		5835E0612A8A215000C260C7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5835E0602A8A215000C260C7 /* StoreKit.framework */; };
 		5835E0642A8A2A0000C260C7 /* IAPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5835E0632A8A2A0000C260C7 /* IAPService.swift */; };
+		5835E0662A8A6E6D00C260C7 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5835E0652A8A6E6D00C260C7 /* PurchaseViewController.swift */; };
 		583B18282A8400C0000D1AB4 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 583B18272A8400C0000D1AB4 /* RxCocoa */; };
 		583B182A2A8400C0000D1AB4 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 583B18292A8400C0000D1AB4 /* RxRelay */; };
 		583B182C2A8400C0000D1AB4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 583B182B2A8400C0000D1AB4 /* RxSwift */; };
@@ -84,6 +85,7 @@
 		5835E05F2A8A213800C260C7 /* MVVM-Framework-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MVVM-Framework-iOS.entitlements"; sourceTree = "<group>"; };
 		5835E0602A8A215000C260C7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		5835E0632A8A2A0000C260C7 /* IAPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPService.swift; sourceTree = "<group>"; };
+		5835E0652A8A6E6D00C260C7 /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 		5863DE322A83D0C500408513 /* MVVM-Framework-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-Framework-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5863DE352A83D0C500408513 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5863DE372A83D0C500408513 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				587B6F162A889A71000840D1 /* HomeViewController.swift */,
 				587B6F1D2A88F4C4000840D1 /* TestViewController.swift */,
 				587B6F1F2A88F672000840D1 /* TestRootViewController.swift */,
+				5835E0652A8A6E6D00C260C7 /* PurchaseViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				5835E0642A8A2A0000C260C7 /* IAPService.swift in Sources */,
 				587B6F202A88F672000840D1 /* TestRootViewController.swift in Sources */,
 				5863DE362A83D0C500408513 /* AppDelegate.swift in Sources */,
+				5835E0662A8A6E6D00C260C7 /* PurchaseViewController.swift in Sources */,
 				5863DE382A83D0C500408513 /* SceneDelegate.swift in Sources */,
 				5804ADB52A87D1DB00CA66C5 /* DTO.swift in Sources */,
 				587B6F172A889A71000840D1 /* HomeViewController.swift in Sources */,
