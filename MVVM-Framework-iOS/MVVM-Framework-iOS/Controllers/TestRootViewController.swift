@@ -22,8 +22,8 @@ final class TestRootViewController: UIViewController {
         view.backgroundColor = .yellow
         
         toHomeButton.do {
-            let configuration = UIImage.SymbolConfiguration(pointSize: 50, weight: .semibold)
-            $0.tintColor = .purple
+            let configuration = UIImage.SymbolConfiguration(pointSize: 50, weight: .light)
+            $0.tintColor = .black
             $0.setImage(UIImage(systemName: "house", withConfiguration: configuration), for: .normal)
         }
         
