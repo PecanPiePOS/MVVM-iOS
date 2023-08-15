@@ -27,7 +27,7 @@
 		587B6F172A889A71000840D1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B6F162A889A71000840D1 /* HomeViewController.swift */; };
 		587B6F1C2A88E570000840D1 /* PhotoCellCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B6F1B2A88E570000840D1 /* PhotoCellCircleView.swift */; };
 		587B6F1E2A88F4C4000840D1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B6F1D2A88F4C4000840D1 /* TestViewController.swift */; };
-		587B6F202A88F672000840D1 /* TestRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B6F1F2A88F672000840D1 /* TestRootViewController.swift */; };
+		587B6F202A88F672000840D1 /* IAPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B6F1F2A88F672000840D1 /* IAPViewController.swift */; };
 		58FA94F92A83DF64008BBE4F /* MyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FA94F62A83DF57008BBE4F /* MyFramework.framework */; };
 		58FA94FA2A83DF64008BBE4F /* MyFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 58FA94F62A83DF57008BBE4F /* MyFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		58FA95072A83DF88008BBE4F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 58FA95062A83DF88008BBE4F /* SnapKit */; };
@@ -100,7 +100,7 @@
 		587B6F162A889A71000840D1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		587B6F1B2A88E570000840D1 /* PhotoCellCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCellCircleView.swift; sourceTree = "<group>"; };
 		587B6F1D2A88F4C4000840D1 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		587B6F1F2A88F672000840D1 /* TestRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRootViewController.swift; sourceTree = "<group>"; };
+		587B6F1F2A88F672000840D1 /* IAPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPViewController.swift; sourceTree = "<group>"; };
 		58FA94F02A83DF57008BBE4F /* MyFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MyFramework.xcodeproj; path = ../MyFramework/MyFramework.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,7 +239,7 @@
 			children = (
 				587B6F162A889A71000840D1 /* HomeViewController.swift */,
 				587B6F1D2A88F4C4000840D1 /* TestViewController.swift */,
-				587B6F1F2A88F672000840D1 /* TestRootViewController.swift */,
+				587B6F1F2A88F672000840D1 /* IAPViewController.swift */,
 				5835E0652A8A6E6D00C260C7 /* PurchaseViewController.swift */,
 			);
 			path = Controllers;
@@ -438,7 +438,7 @@
 				587B6F1E2A88F4C4000840D1 /* TestViewController.swift in Sources */,
 				5804ADB32A87D1CB00CA66C5 /* PhotoCell.swift in Sources */,
 				5835E0642A8A2A0000C260C7 /* IAPService.swift in Sources */,
-				587B6F202A88F672000840D1 /* TestRootViewController.swift in Sources */,
+				587B6F202A88F672000840D1 /* IAPViewController.swift in Sources */,
 				5863DE362A83D0C500408513 /* AppDelegate.swift in Sources */,
 				5835E0662A8A6E6D00C260C7 /* PurchaseViewController.swift in Sources */,
 				5863DE382A83D0C500408513 /* SceneDelegate.swift in Sources */,
