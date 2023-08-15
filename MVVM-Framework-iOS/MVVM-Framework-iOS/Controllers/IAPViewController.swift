@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class TestRootViewController: UIViewController {
+final class IAPViewController: UIViewController {
 
     private lazy var toHomeButton = UIButton(frame: .zero, primaryAction: UIAction(handler: { [weak self] _ in
         let vc = HomeViewController()
@@ -33,5 +33,9 @@ final class TestRootViewController: UIViewController {
             $0.size.equalTo(100)
             $0.center.equalToSuperview()
         }
+    }
+    
+    deinit {
+        print("IAP VC Out")
     }
 }
