@@ -7,11 +7,13 @@
 
 import UIKit
 
+import FirebaseAnalytics
+import Firebase
 import SnapKit
 import Then
 
 final class TestRootViewController: UIViewController {
-
+    
     private lazy var toHomeButton = UIButton(frame: .zero, primaryAction: UIAction(handler: { [weak self] _ in
         let vc = HomeViewController()
         self?.navigationController?.pushViewController(vc, animated: true)
