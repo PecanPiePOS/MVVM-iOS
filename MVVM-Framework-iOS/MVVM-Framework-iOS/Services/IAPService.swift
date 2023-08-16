@@ -102,6 +102,7 @@ extension IAPServie: SKProductsRequestDelegate {
     
     func request(_ request: SKRequest, didFailWithError error: Error) {
         productsRequestCompletionHandler?(false, nil)
+        clearRequestAndHandler()
     }
     
     private func clearRequestAndHandler() {
@@ -112,6 +113,41 @@ extension IAPServie: SKProductsRequestDelegate {
 
 extension IAPServie: SKPaymentTransactionObserver {
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        print(transactions)
+        for transaction in transactions {
+            let state = transaction.transactionState
+            switch state {
+            case .purchasing:
+                
+            case .purchased:
+                
+            case .failed:
+                
+            case .restored:
+                
+            case .deferred:
+                
+            @unknown default:
+                print("New State has been added.")
+            }
+        }
+    }
+    
+    private func completedPurchase(transaction: SKPaymentTransaction) {
+        
+    }
+    
+    private func failedPurchase(transaction: SKPaymentTransaction) {
+        
+    }
+    
+    private func restoredPurchases(transaction: SKPaymentTransaction) {
+        
+    }
+    
+    private func passPurchaseNotificationFor(identifier: String?) {
+        guard let identifier = identifier else { return }
+//        let dictionaryForProductInformation: ProductInfo
     }
 }
 
