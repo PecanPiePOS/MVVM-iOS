@@ -45,7 +45,7 @@ extension HomeViewController {
         
         self.refreshButton.rx.tap
             .bind { [weak self] in
-                let vc = TestViewController()
+                let vc = IAPViewController()
                 self?.navigationController?.pushViewController(vc, animated: true)
             }
             .disposed(by: disposeBag)
