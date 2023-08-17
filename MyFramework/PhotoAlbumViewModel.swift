@@ -40,7 +40,7 @@ public protocol PhotoAlbumViewModelOutputs {
     /// This will turn into [PhotoModel] as soon as I get Exif Datas
     /// var photoAlbumLists: BehaviorSubject<[PhotoModel]> { get }
 
-    var photoAlbumLists: BehaviorSubject<[String]> { get }
+    var photoAlbumLists: BehaviorRelay<[String]> { get }
     
 }
 
@@ -55,7 +55,7 @@ public final class PhotoAlbumViewModel: PhotoAlbumViewModelType, PhotoAlbumViewM
     private var registeredImageNumberArray: [Int] = []
     private var remainingImageNumberArray: [Int] = []
     
-    public var photoAlbumLists: BehaviorSubject<[String]> = BehaviorSubject(value: [])
+    public var photoAlbumLists: BehaviorRelay<[String]> = BehaviorRelay(value: [])
     
     private var disposeBag: DisposeBag = DisposeBag()
     
@@ -67,7 +67,7 @@ public final class PhotoAlbumViewModel: PhotoAlbumViewModelType, PhotoAlbumViewM
                                                 count: 4,
                                                 remaining: remainingImageNumberArray,
                                                 registered: registeredImageNumberArray)
-        photoAlbumLists.onNext(randomPhoto)
+        photoAlbumLists.accept(randomPhoto)
     }
 //    public func photoCellTapped() {}
     
@@ -81,16 +81,16 @@ public final class PhotoAlbumViewModel: PhotoAlbumViewModelType, PhotoAlbumViewM
         self.remainingImageNumberArray = randomImageArray
         let updatedNewArray = convertIntToStringArray(from: self.registeredImageNumberArray)
         
-        photoAlbumLists.onNext(updatedNewArray)
+        photoAlbumLists.accept(updatedNewArray)
     }
     
     public func refresh() {
         let newRandomImageArray: [String] = selectRandomImageName(from: imageNumberArray, count: 4, remaining: remainingImageNumberArray, registered: registeredImageNumberArray)
         
-        photoAlbumLists.onNext(newRandomImageArray)
+        photoAlbumLists.accept(newRandomImageArray)
     }
     
-    /// Does it need new Custom Control?? Rx...
+    /// Does it need new Custom Control?? Rx... DoubleTap..?
     public func animateCellButtonDoubleTapped() {}
     
     public func viewDidLoad() {}
