@@ -1,18 +1,23 @@
 //
-//  IAPViewController.swift
+//  MoyaRxTestViewController.swift
 //  MVVM-Framework-iOS
 //
 //  Created by KYUBO A. SHIM on 2023/08/13.
 //
 
 import UIKit
+import MyFramework
 
 import Moya
-import MyFramework
+import SnapKit
+import Then
 
 final class MoyaRxTestViewController: UIViewController {
 
-    let provider = MoyaProvider<NetworkApi>()
+    private let provider = MoyaProvider<NetworkApi>()
+    
+    private let tableView = UITableView(frame: .zero)
+    private let nameLabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()

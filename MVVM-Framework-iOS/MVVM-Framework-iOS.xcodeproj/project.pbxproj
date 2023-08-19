@@ -41,7 +41,7 @@
 		586E7D532A90A1C200DCF894 /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586E7D522A90A1C200DCF894 /* Encodable+.swift */; };
 		587B6F172A889A71000840D1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B6F162A889A71000840D1 /* HomeViewController.swift */; };
 		587B6F1C2A88E570000840D1 /* PhotoCellCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B6F1B2A88E570000840D1 /* PhotoCellCircleView.swift */; };
-		587B6F1E2A88F4C4000840D1 /* IAPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B6F1D2A88F4C4000840D1 /* IAPViewController.swift */; };
+		587B6F1E2A88F4C4000840D1 /* MoyaRxTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B6F1D2A88F4C4000840D1 /* MoyaRxTestViewController.swift */; };
 		587B6F202A88F672000840D1 /* TestRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B6F1F2A88F672000840D1 /* TestRootViewController.swift */; };
 		589A663C2A909A45000600AB /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A663B2A909A45000600AB /* ApiService.swift */; };
 		58A8FC802A9082E7008FDF5A /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 58A8FC7F2A9082E7008FDF5A /* Moya */; };
@@ -118,7 +118,7 @@
 		586E7D522A90A1C200DCF894 /* Encodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
 		587B6F162A889A71000840D1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		587B6F1B2A88E570000840D1 /* PhotoCellCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCellCircleView.swift; sourceTree = "<group>"; };
-		587B6F1D2A88F4C4000840D1 /* IAPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPViewController.swift; sourceTree = "<group>"; };
+		587B6F1D2A88F4C4000840D1 /* MoyaRxTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaRxTestViewController.swift; sourceTree = "<group>"; };
 		587B6F1F2A88F672000840D1 /* TestRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRootViewController.swift; sourceTree = "<group>"; };
 		589A663B2A909A45000600AB /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		58FA94F02A83DF57008BBE4F /* MyFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MyFramework.xcodeproj; path = ../MyFramework/MyFramework.xcodeproj; sourceTree = "<group>"; };
@@ -275,7 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				587B6F162A889A71000840D1 /* HomeViewController.swift */,
-				587B6F1D2A88F4C4000840D1 /* IAPViewController.swift */,
+				587B6F1D2A88F4C4000840D1 /* MoyaRxTestViewController.swift */,
 				587B6F1F2A88F672000840D1 /* TestRootViewController.swift */,
 				5835E0652A8A6E6D00C260C7 /* PurchaseViewController.swift */,
 			);
@@ -504,7 +504,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				587B6F1E2A88F4C4000840D1 /* IAPViewController.swift in Sources */,
+				587B6F1E2A88F4C4000840D1 /* MoyaRxTestViewController.swift in Sources */,
 				5804ADB32A87D1CB00CA66C5 /* PhotoCell.swift in Sources */,
 				5835E0642A8A2A0000C260C7 /* IAPService.swift in Sources */,
 				587B6F202A88F672000840D1 /* TestRootViewController.swift in Sources */,
