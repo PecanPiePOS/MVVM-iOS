@@ -39,7 +39,7 @@ enum NetworkApi {
 
 extension NetworkApi: TargetType {
     var baseURL: URL {
-        guard let url = URL(string: "https://reqres.in") else {
+        guard let url = URL(string: "https://reqres.in/api") else {
             print("No Available URL")
             return URL(string: "")!
         }
@@ -49,13 +49,13 @@ extension NetworkApi: TargetType {
     var path: String {
         switch self {
         case .fetchListOfUsers:     // page as param
-            return "/api/users"
+            return "/users"
         case .fetchSingleUser(let user):
-            return "/api/users/\(user)"
+            return "/users/\(user)"
         case .fetchDelayedResponse: // delay as param
-            return "/api/users"
+            return "/users"
         case .postLoginSuccess:
-            return "/api/login"
+            return "/login"
         }
     }
     
