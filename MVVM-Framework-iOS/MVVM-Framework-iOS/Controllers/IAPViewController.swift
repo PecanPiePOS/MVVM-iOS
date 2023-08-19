@@ -7,8 +7,13 @@
 
 import UIKit
 
+import Moya
+import MyFramework
+
 final class IAPViewController: UIViewController {
 
+    let provider = MoyaProvider<NetworkApi>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
