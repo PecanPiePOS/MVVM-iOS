@@ -9,16 +9,32 @@ import Foundation
 
 import Moya
 
-struct userLoginInfoModel: Codable {
+struct UserLoginInfoModel: Codable {
+    let userName: String
     let email: String
     let password: String
+    
+    enum CodingKeys: String, CodingKey {
+        case email, password
+        case userName = "username"
+    }
+}
+
+struct UserPageModel: Codable {
+    let page: Int
+    let perPage: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case page
+        case perPage = "per_page"
+    }
 }
 
 enum NetworkApi {
-    case fetchListOfUsers(_ page: Int)
+    case fetchListOfUsers(_ page: UserPageModel)
     case fetchSingleUser(_ user: Int)
     case fetchDelayedResponse(_ user: Int)
-    case postLoginSuccess(_ userInfo: userLoginInfoModel)
+    case postLoginSuccess(_ userInfo: UserLoginInfoModel)
 }
 
 extension NetworkApi: TargetType {
@@ -58,9 +74,14 @@ extension NetworkApi: TargetType {
     
     var task: Moya.Task {
         switch self {
-        case .fetchListOfUsers(let pageIndex):
-            let parameter: [String: Any] = ["page": pageIndex]
-            return .requestParameters(parameters: parameter, encoding: URLEncoding.default)
+        case .fetchListOfUsers(let page):
+            do {
+                let parameter = try page.asParameter()
+                return .requestParameters(parameters: parameter, encoding: URLEncoding.default)
+            } catch let error {
+                print(error)
+                return .requestPlain
+            }
         case .fetchSingleUser:
             return .requestPlain
         case .fetchDelayedResponse(let delaySeconds):
@@ -78,7 +99,7 @@ extension NetworkApi: TargetType {
     }
     
     var headers: [String : String]? {
-        var header = ["Content-Type": "application/json"]
+        let header = ["Content-Type": "application/json"]
         return header
     }
 }
