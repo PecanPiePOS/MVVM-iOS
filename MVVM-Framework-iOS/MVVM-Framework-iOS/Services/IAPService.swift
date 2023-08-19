@@ -12,9 +12,6 @@ typealias ConsumableId = String
 typealias SubsriptionId = String
 typealias ProductRequestCompletionHandler = (_ success: Bool, _ products: [SKProduct]?) -> Void
 
-
-
-
     /**
      Sets Ids and Store Information of In-App products.
      */
