@@ -31,10 +31,11 @@ struct UserPageModel: Codable {
 }
 
 enum NetworkApi {
-    case fetchListOfUsers(_ page: UserPageModel)
+    case fetchListOfUsers(_ page: UserPageModel)    // OK
     case fetchSingleUser(_ user: Int)
     case fetchDelayedResponse(_ user: Int)
     case postLoginSuccess(_ userInfo: UserLoginInfoModel)
+    case registerSuccess(_ userInfo: UserLoginInfoModel)
 }
 
 extension NetworkApi: TargetType {
@@ -56,6 +57,8 @@ extension NetworkApi: TargetType {
             return "/users"
         case .postLoginSuccess:
             return "/login"
+        case .registerSuccess:
+            return "/register"
         }
     }
     
@@ -68,6 +71,8 @@ extension NetworkApi: TargetType {
         case .fetchDelayedResponse:
             return .get
         case .postLoginSuccess:
+            return .post
+        case .registerSuccess:
             return .post
         }
     }
@@ -91,6 +96,14 @@ extension NetworkApi: TargetType {
             do {
                 let parameter = try userInfo.asParameter()
                 return .requestParameters(parameters: parameter, encoding: JSONEncoding.default)
+            } catch let error {
+                print(error)
+                return .requestPlain
+            }
+        case .registerSuccess(let newUserInfo):
+            do {
+                let parameter = try newUserInfo.asParameter()
+                return .requestParameters(parameters: parameter, encoding: URLEncoding.default)
             } catch let error {
                 print(error)
                 return .requestPlain
