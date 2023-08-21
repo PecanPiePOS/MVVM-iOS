@@ -45,6 +45,7 @@ final class MoyaRxTestViewController: UIViewController {
         // ⭐️⭐️⭐️ 왜 Moya 를 Rx 로 써야하는지... 참고: https://leejigun.github.io/Tayga-Moya,RxSwift
         let userFetchData = UserPageModel(page: 1, perPage: 10)
         
+        /// 여기서 받은걸 Observable 로 만들기
         self.requestFetched = provider.rx.request(.fetchListOfUsers(userFetchData))
             .retry(3)
             .asObservable()
@@ -67,67 +68,7 @@ final class MoyaRxTestViewController: UIViewController {
                 }
             }
             .disposed(by: disposeBag)
-        
-        //        let kkk = provider.rx.request(.fetchListOfUsers(userFetchData))
-        //            .asObservable()
-        //            .map {
-        //            print("🧩")
-        //            try JSONDecoder().decode(UsersModel.self, from: $0.data)
-        //            }
-        //
-        //        self.requestFetched = kkk
-        
-        
-        //            .retry(3)
-        //            .asObservable()
-        
-        
-//        provider.request(.fetchListOfUsers(userFetchData)) { [weak self] response in
-//            switch response {
-//            case .success(let result):
-//                let status = result.statusCode
-//                switch status {
-//                case 200..<299:
-//                    print("Here we go")
-//                    guard let data = try? result.map(GeneralResponse<[UserData]>.self).data else {
-//                        print("Hey")
-//                        return }
-//                    print(data)
-//                default:
-//                    print("??????")
-//                }
-//            case .failure(_):
-//                print("?!?!?!")
-//            }
-//        }
-//
-        
-        
-        //            .map({
-        //                try JSONDecoder().decode([UserData].self, from: $0.data)
-        //            })
-        //            .catchAndReturn([])
-        //            .map { try JSONDecoder().decode([UserPageModel].self, from: $0.data) }
-        
-        //        requestFetchingList.subscribe { event in
-        //            switch event {
-        //            case .success(let response):
-        //                guard let data = try? response.map(GeneralResponse<[UserData]>.self).data else { return }
-        //                print("⭐️⭐️⭐️⭐️⭐️⭐️")
-        //                print(data)
-        //                print("⭐️⭐️⭐️⭐️⭐️⭐️")
-        //
-        //                /// 1. 여기서 받은걸 Observable 로 만들기
-        //                /// 2. Framework 에 넣을 수 없는 이유
-        //                ///     a. Computed Property 를 사용하면, Dynamic Framework 에서는 Build 오류가 발생
-        //                ///  - https://hururuek-chapchap.tistory.com/230
-        //
-        //            case .failure(_):
-        //                print("⚠️⚠️⚠️⚠️")
-        //            }
-        //        }
-        //        .disposed(by: self.disposeBag)
-    }
+}
     
     private func setStyles() {
         view.backgroundColor = .blue
