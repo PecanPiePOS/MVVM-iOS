@@ -55,7 +55,7 @@ public final class PhotoAlbumViewModel: PhotoAlbumViewModelType, PhotoAlbumViewM
     private var registeredImageNumberArray: [Int] = []
     private var remainingImageNumberArray: [Int] = []
     
-    public var photoAlbumLists: BehaviorRelay<[String]> = BehaviorRelay(value: [])
+    public let photoAlbumLists: BehaviorRelay<[String]> = BehaviorRelay(value: [])
     
     private var disposeBag: DisposeBag = DisposeBag()
     
