@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+import Moya
+import RxCocoa
+import RxMoya
+import RxSwift
+
+final class MoyaRxViewModel {
+//    private var
+//    func
+}

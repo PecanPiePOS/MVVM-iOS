@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		5804ADB32A87D1CB00CA66C5 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5804ADB22A87D1CB00CA66C5 /* PhotoCell.swift */; };
 		5804ADB52A87D1DB00CA66C5 /* DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5804ADB42A87D1DB00CA66C5 /* DTO.swift */; };
+		581915A42A925EDD00E25864 /* MoyaRxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581915A32A925EDD00E25864 /* MoyaRxViewModel.swift */; };
+		582D8BBA2A931E1D00838975 /* MoyaTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D8BB92A931E1D00838975 /* MoyaTestTableViewCell.swift */; };
+		582D8BBF2A93429A00838975 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D8BBE2A93429A00838975 /* UIImage+.swift */; };
+		582D8BC22A934BB900838975 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D8BC12A934BB900838975 /* CacheManager.swift */; };
 		5835E0612A8A215000C260C7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5835E0602A8A215000C260C7 /* StoreKit.framework */; };
 		5835E0642A8A2A0000C260C7 /* IAPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5835E0632A8A2A0000C260C7 /* IAPService.swift */; };
 		5835E0662A8A6E6D00C260C7 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5835E0652A8A6E6D00C260C7 /* PurchaseViewController.swift */; };
@@ -102,6 +106,10 @@
 /* Begin PBXFileReference section */
 		5804ADB22A87D1CB00CA66C5 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		5804ADB42A87D1DB00CA66C5 /* DTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTO.swift; sourceTree = "<group>"; };
+		581915A32A925EDD00E25864 /* MoyaRxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaRxViewModel.swift; sourceTree = "<group>"; };
+		582D8BB92A931E1D00838975 /* MoyaTestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaTestTableViewCell.swift; sourceTree = "<group>"; };
+		582D8BBE2A93429A00838975 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		582D8BC12A934BB900838975 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		5835E05F2A8A213800C260C7 /* MVVM-Framework-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MVVM-Framework-iOS.entitlements"; sourceTree = "<group>"; };
 		5835E0602A8A215000C260C7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		5835E0632A8A2A0000C260C7 /* IAPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPService.swift; sourceTree = "<group>"; };
@@ -181,8 +189,8 @@
 		5804ADB02A87D1A600CA66C5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5804ADB22A87D1CB00CA66C5 /* PhotoCell.swift */,
-				587B6F1B2A88E570000840D1 /* PhotoCellCircleView.swift */,
+				582D8BB82A931DDD00838975 /* Moya */,
+				582D8BB72A931DD200838975 /* Photos */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -194,6 +202,31 @@
 				586B0ADF2A8B8683005841E1 /* IAPProductKey.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		581915A22A925EBF00E25864 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				581915A32A925EDD00E25864 /* MoyaRxViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		582D8BB72A931DD200838975 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				5804ADB22A87D1CB00CA66C5 /* PhotoCell.swift */,
+				587B6F1B2A88E570000840D1 /* PhotoCellCircleView.swift */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		582D8BB82A931DDD00838975 /* Moya */ = {
+			isa = PBXGroup;
+			children = (
+				582D8BB92A931E1D00838975 /* MoyaTestTableViewCell.swift */,
+			);
+			path = Moya;
 			sourceTree = "<group>";
 		};
 		5835E0622A8A29EF00C260C7 /* Services */ = {
@@ -228,6 +261,7 @@
 		5863DE342A83D0C500408513 /* MVVM-Framework-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				581915A22A925EBF00E25864 /* ViewModels */,
 				586E7D512A90A1B400DCF894 /* Util */,
 				589A663A2A909A2F000600AB /* APIService */,
 				5835E0622A8A29EF00C260C7 /* Services */,
@@ -292,6 +326,8 @@
 			isa = PBXGroup;
 			children = (
 				586E7D522A90A1C200DCF894 /* Encodable+.swift */,
+				582D8BBE2A93429A00838975 /* UIImage+.swift */,
+				582D8BC12A934BB900838975 /* CacheManager.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -518,6 +554,7 @@
 				586E7D552A9114A900DCF894 /* PlugginType.swift in Sources */,
 				5835E0642A8A2A0000C260C7 /* IAPService.swift in Sources */,
 				586E7D5C2A912B7600DCF894 /* GeneralResponse.swift in Sources */,
+				582D8BBA2A931E1D00838975 /* MoyaTestTableViewCell.swift in Sources */,
 				587B6F202A88F672000840D1 /* TestRootViewController.swift in Sources */,
 				5863DE362A83D0C500408513 /* AppDelegate.swift in Sources */,
 				586B0AE02A8B8683005841E1 /* IAPProductKey.swift in Sources */,
@@ -525,7 +562,10 @@
 				5835E0662A8A6E6D00C260C7 /* PurchaseViewController.swift in Sources */,
 				5863DE382A83D0C500408513 /* SceneDelegate.swift in Sources */,
 				5804ADB52A87D1DB00CA66C5 /* DTO.swift in Sources */,
+				582D8BC22A934BB900838975 /* CacheManager.swift in Sources */,
+				581915A42A925EDD00E25864 /* MoyaRxViewModel.swift in Sources */,
 				587B6F172A889A71000840D1 /* HomeViewController.swift in Sources */,
+				582D8BBF2A93429A00838975 /* UIImage+.swift in Sources */,
 				587B6F1C2A88E570000840D1 /* PhotoCellCircleView.swift in Sources */,
 				586E7D532A90A1C200DCF894 /* Encodable+.swift in Sources */,
 			);
