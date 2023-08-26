@@ -14,10 +14,6 @@ import RxCocoa
 /// https://linux-studying.tistory.com/28
 
 public protocol PhotoAlbumViewModelInputs {
-    
-    /// Call when the indivisual cell is tapped.
-    /// Turns out it is unneccessary for the example codes.
-//    func photoCellTapped()
 
     /// Call when the images are updated.
     func updatePhotos(index: Int)

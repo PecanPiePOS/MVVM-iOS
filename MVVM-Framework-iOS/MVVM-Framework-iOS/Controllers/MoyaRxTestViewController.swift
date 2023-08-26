@@ -107,14 +107,7 @@ final class MoyaRxTestViewController: UIViewController {
 
 extension MoyaRxTestViewController {
     private func subscribeNetwork() {
-        requestFetched?.subscribe(
-            onNext: { [weak self] data in
-                self?.tableViewData.onNext(data)
-                print("Connection is Good")
-        },
-            onError: { error in
-            print(error)
-        })
-        .disposed(by: disposeBag)
+        requestFetched?.bind(to: self.tableViewData)
+            .disposed(by: disposeBag)
     }
 }
