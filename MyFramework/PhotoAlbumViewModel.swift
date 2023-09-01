@@ -84,6 +84,7 @@ public final class PhotoAlbumViewModel: PhotoAlbumViewModelType, PhotoAlbumViewM
         let newRandomImageArray: [String] = selectRandomImageName(from: imageNumberArray, count: 4, remaining: remainingImageNumberArray, registered: registeredImageNumberArray)
         
         photoAlbumLists.accept(newRandomImageArray)
+        print("aergerg")
     }
     
     /// Does it need new Custom Control?? Rx... DoubleTap..?
