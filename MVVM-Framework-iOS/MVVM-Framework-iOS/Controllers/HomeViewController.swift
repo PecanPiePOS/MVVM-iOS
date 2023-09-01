@@ -30,6 +30,7 @@ final class HomeViewController: UIViewController {
     
     deinit {
         print("HomeVC OUT")
+        disposeBag = DisposeBag()
     }
 }
 
