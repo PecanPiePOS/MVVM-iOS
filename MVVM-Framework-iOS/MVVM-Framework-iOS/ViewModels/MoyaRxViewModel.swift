@@ -18,5 +18,4 @@ import RxSwift
     (Ref)https://hururuek-chapchap.tistory.com/230
  */
 final class MoyaRxViewModel {
-
 }
