@@ -87,6 +87,46 @@ public final class PhotoAlbumViewModel: PhotoAlbumViewModelType, PhotoAlbumViewM
         print("aergerg")
     }
     
+    public func shareInstagram(sharingView: UIView) {
+                
+        guard let instagramURL = URL(string: "instagram-stories://share?source_application=" + "314518827793677") else { return }
+
+        print("Available URL")
+
+        if isInstagramInstalled() != false {
+            let renderer = UIGraphicsImageRenderer(size: sharingView.bounds.size)
+
+            let renderImage = renderer.image { _ in
+                sharingView.drawHierarchy(in: sharingView.bounds, afterScreenUpdates: true)
+            }
+
+            guard let imageData = renderImage.pngData() else { return }
+            let pasteboardItems: [String: Any] = [
+                "com.instagram.sharedSticker.stickerImage": imageData,
+                "com.instagram.sharedSticker.backgroundTopColor" : "#ffffff",
+                "com.instagram.sharedSticker.backgroundBottomColor" : "#ffffff"
+            ]
+
+            let pasteboardOptions = [
+                UIPasteboard.OptionsKey.expirationDate : Date().addingTimeInterval(300)
+            ]
+
+            UIPasteboard.general.setItems([pasteboardItems], options: pasteboardOptions)
+            
+            let activityViewController = UIActivityViewController(activityItems: [pasteboardItems], applicationActivities: nil)
+            activityViewController.excludedActivityTypes = [.addToReadingList]
+            
+//            UIApplication.shared.open(instagramURL, options: [:], completionHandler: nil)
+        } else {
+            print("Unavailable URL")
+
+            guard let instagramURL = URL(string: "https://apps.apple.com/kr/app/instagram/id389801252") else {
+                return
+            }
+            return UIApplication.shared.open(instagramURL)
+        }
+    }
+    
     /// Does it need new Custom Control?? Rx... DoubleTap..?
     public func animateCellButtonDoubleTapped() {}
     
@@ -125,5 +165,12 @@ extension PhotoAlbumViewModel {
             resultStringArray.append(imageName)
         }
         return resultStringArray
+    }
+    
+    private func isInstagramInstalled() -> Bool {
+        guard let instagramURL = URL(string: "instagram-stories://share") else {
+            return false
+        }
+        return UIApplication.shared.canOpenURL(instagramURL)
     }
 }
