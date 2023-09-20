@@ -12,7 +12,6 @@ import Then
 
 final class InstagramShareViewController: UIViewController {
 
-    
     private let sharingView = UIView()
     private let stickerImageView = UIImageView()
     private lazy var shareButton = UIButton(primaryAction: UIAction(handler: { [weak self] _ in
@@ -25,27 +24,22 @@ final class InstagramShareViewController: UIViewController {
         self?.dismiss(animated: true)
     }))
     
-    private var kkk = 3
-    private lazy var fdgkr = ["ff": self.kkk]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("1-")
-        print(";; \(self.kkk)")
-        print(fdgkr)
         setLayout()
         setStyles()
     }
 
+    deinit {
+        print(self.className)
+    }
 }
 
 extension InstagramShareViewController {
     
     private func setStyles() {
         view.backgroundColor = .black
-        
-        print("3")
-        
+                
         sharingView.do {
             $0.layer.borderColor = UIColor.black.cgColor
             $0.layer.borderWidth = 3
@@ -116,18 +110,11 @@ extension InstagramShareViewController {
             $0.size.equalTo(30)
         }
     }
-    
-    func initlll() {
-        print("2")
-        self.kkk = 1
-    }
 }
 
 extension InstagramShareViewController {
     private func pushOnPresentVC() {
         let vc = PoPTestViewController()
-//        let nav = UINavigationController(rootViewController: vc)
-//        nav.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
