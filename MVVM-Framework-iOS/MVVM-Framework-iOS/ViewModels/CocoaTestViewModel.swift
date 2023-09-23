@@ -5,4 +5,11 @@
 //  Created by KYUBO A. SHIM on 2023/09/08.
 //
 
-import Foundation
+import UIKit
+
+import RxCocoa
+import RxSwift
+
+final class CocoaTestViewModel {
+    let toggleObservable = BehaviorSubject(value: false)
+}
