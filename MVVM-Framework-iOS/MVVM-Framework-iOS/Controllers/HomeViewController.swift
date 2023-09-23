@@ -13,6 +13,12 @@ import RxCocoa
 import SnapKit
 import Then
 
+extension NSObject {
+    var className: String {
+       NSStringFromClass(self.classForCoder).components(separatedBy: ".").last!
+   }
+}
+
 final class HomeViewController: UIViewController {
 
     private var disposeBag = DisposeBag()
@@ -20,16 +26,18 @@ final class HomeViewController: UIViewController {
     
     private let refreshButton = UIButton(type: .system)
     private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: setFlowLayout())
+    private let circle = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         bindStyles()
         bindViewModel()
         bindLayout()
+        UserDefaults.standard.set("Helloooo", forKey: "Hey")
     }
     
     deinit {
-        print("HomeVC OUT")
+        print(self.className)
         disposeBag = DisposeBag()
     }
 }
@@ -41,6 +49,7 @@ extension HomeViewController {
             .bind(to: collectionView.rx.items(cellIdentifier: "photoCell", cellType: PhotoCell.self))
             { row, element, cell in
                 cell.configure(imageOf: element)
+                cell.delegate = self
             }
             .disposed(by: disposeBag)
         
@@ -50,7 +59,6 @@ extension HomeViewController {
                 self?.navigationController?.pushViewController(vc, animated: true)
             }
             .disposed(by: disposeBag)
-        
         
         self.collectionView.rx.setDelegate(self)
             .disposed(by: disposeBag)
@@ -71,11 +79,17 @@ extension HomeViewController {
             $0.backgroundColor = .clear
             $0.contentInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
         }
+        
+        circle.do {
+            $0.image = UIImage(systemName: "circle.fill")
+            $0.tintColor = .red
+        }
     }
     
     private func bindLayout() {
         view.addSubview(collectionView)
         view.addSubview(refreshButton)
+        view.addSubview(circle)
         
         refreshButton.snp.makeConstraints {
             $0.centerX.equalToSuperview()
@@ -87,6 +101,12 @@ extension HomeViewController {
             $0.centerY.equalToSuperview()
             $0.horizontalEdges.equalToSuperview()
             $0.height.equalToSuperview().dividedBy(1.5)
+        }
+        
+        circle.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.centerY.equalTo(collectionView.snp.top)
+            $0.size.equalTo(30)
         }
     }
     
@@ -111,6 +131,57 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension HomeViewController {
+extension HomeViewController: ShareButtonTappedProtocol {
+    func openActivityVC(sharingView: UIView) {
+        shareInstagram(sharingView: sharingView)
+    }
     
+    private func isInstagramInstalled() -> Bool {
+        guard let instagramURL = URL(string: "instagram-stories://share") else {
+            return false
+        }
+        return UIApplication.shared.canOpenURL(instagramURL)
+    }
+    
+    public func shareInstagram(sharingView: UIView) {
+                
+        guard let instagramURL = URL(string: "instagram-stories://share?source_application=" + "314518827793677") else { return }
+
+        print("Available URL")
+
+        if isInstagramInstalled() != false {
+//            let renderer = UIGraphicsImageRenderer(size: sharingView.bounds.size)
+//
+//            let renderImage = renderer.image { _ in
+//                sharingView.drawHierarchy(in: sharingView.bounds, afterScreenUpdates: true)
+//            }
+
+            guard let imageData = sharingView.saveUIViewWithScale(with: 5) else { return }
+//            guard let renderImage = UIImage(data: imageData) else { return }
+            let pasteboardItems: [String: Any] = [
+                "com.instagram.sharedSticker.stickerImage": imageData,
+                "com.instagram.sharedSticker.backgroundTopColor" : "#F9F9F9",
+                "com.instagram.sharedSticker.backgroundBottomColor" : "#F6F6F6"
+            ]
+
+            let pasteboardOptions = [
+                UIPasteboard.OptionsKey.expirationDate : Date().addingTimeInterval(300)
+            ]
+
+            UIPasteboard.general.setItems([pasteboardItems], options: pasteboardOptions)
+            
+//            let activityViewController = UIActivityViewController(activityItems: [renderImage], applicationActivities: nil)
+//            activityViewController.excludedActivityTypes = [.addToReadingList]
+//            self.present(activityViewController, animated: true)
+            
+            UIApplication.shared.open(instagramURL, options: [:], completionHandler: nil)
+        } else {
+            print("Unavailable URL")
+
+            guard let instagramURL = URL(string: "https://apps.apple.com/kr/app/instagram/id389801252") else {
+                return
+            }
+            return UIApplication.shared.open(instagramURL)
+        }
+    }
 }
