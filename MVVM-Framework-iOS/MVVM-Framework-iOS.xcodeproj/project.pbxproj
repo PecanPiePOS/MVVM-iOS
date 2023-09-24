@@ -10,6 +10,8 @@
 		5804ADB32A87D1CB00CA66C5 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5804ADB22A87D1CB00CA66C5 /* PhotoCell.swift */; };
 		5804ADB52A87D1DB00CA66C5 /* DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5804ADB42A87D1DB00CA66C5 /* DTO.swift */; };
 		581915A42A925EDD00E25864 /* MoyaRxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581915A32A925EDD00E25864 /* MoyaRxViewModel.swift */; };
+		581BAB0B2AAAF4EB002FAB0C /* CocoaTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581BAB0A2AAAF4EB002FAB0C /* CocoaTestViewModel.swift */; };
+		582BF0E22ABB4CC00041AB89 /* testLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 582BF0E12ABB4CBF0041AB89 /* testLottie.json */; };
 		582D8BBA2A931E1D00838975 /* MoyaTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D8BB92A931E1D00838975 /* MoyaTestTableViewCell.swift */; };
 		582D8BBF2A93429A00838975 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D8BBE2A93429A00838975 /* UIImage+.swift */; };
 		582D8BC22A934BB900838975 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D8BC12A934BB900838975 /* CacheManager.swift */; };
@@ -21,6 +23,9 @@
 		583B182C2A8400C0000D1AB4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 583B182B2A8400C0000D1AB4 /* RxSwift */; };
 		583B18302A84018A000D1AB4 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 583B182F2A84018A000D1AB4 /* RxTest */; };
 		583B18322A84018F000D1AB4 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 583B18312A84018F000D1AB4 /* RxTest */; };
+		583D30672ABEE6A300E99FBA /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583D30662ABEE6A300E99FBA /* BaseView.swift */; };
+		583D30692ABEE6D400E99FBA /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583D30682ABEE6D400E99FBA /* TestView.swift */; };
+		586061D52AC1511900FE2733 /* PopUpTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586061D42AC1511900FE2733 /* PopUpTestViewController.swift */; };
 		5863DE362A83D0C500408513 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5863DE352A83D0C500408513 /* AppDelegate.swift */; };
 		5863DE382A83D0C500408513 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5863DE372A83D0C500408513 /* SceneDelegate.swift */; };
 		5863DE3F2A83D0C600408513 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5863DE3E2A83D0C600408513 /* Assets.xcassets */; };
@@ -41,6 +46,10 @@
 		587B6F202A88F672000840D1 /* TestRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B6F1F2A88F672000840D1 /* TestRootViewController.swift */; };
 		589A663C2A909A45000600AB /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A663B2A909A45000600AB /* ApiService.swift */; };
 		589B29B62AA067A700A4B463 /* InstagramShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589B29B52AA067A700A4B463 /* InstagramShareViewController.swift */; };
+		589E78502AAF68B100BB9213 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 589E784F2AAF68B100BB9213 /* Lottie */; };
+		589E78532AAF697900BB9213 /* Loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 589E78522AAF697900BB9213 /* Loading.json */; };
+		589E78552AAF6B2400BB9213 /* sampleLoading.json in Resources */ = {isa = PBXBuildFile; fileRef = 589E78542AAF6B2400BB9213 /* sampleLoading.json */; };
+		58B7351B2AA4E9D0007485F7 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B7351A2AA4E9D0007485F7 /* UIView+.swift */; };
 		58E3A1092AA0803E0091ADC0 /* MetaConfigurationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E3A1082AA0803E0091ADC0 /* MetaConfigurationService.swift */; };
 		58E3A10B2AA090900091ADC0 /* UICollectionViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E3A10A2AA090900091ADC0 /* UICollectionViewCell+.swift */; };
 		58FA94F92A83DF64008BBE4F /* MyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FA94F62A83DF57008BBE4F /* MyFramework.framework */; };
@@ -98,6 +107,8 @@
 		5804ADB22A87D1CB00CA66C5 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		5804ADB42A87D1DB00CA66C5 /* DTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTO.swift; sourceTree = "<group>"; };
 		581915A32A925EDD00E25864 /* MoyaRxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaRxViewModel.swift; sourceTree = "<group>"; };
+		581BAB0A2AAAF4EB002FAB0C /* CocoaTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoaTestViewModel.swift; sourceTree = "<group>"; };
+		582BF0E12ABB4CBF0041AB89 /* testLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testLottie.json; sourceTree = "<group>"; };
 		582D8BB92A931E1D00838975 /* MoyaTestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaTestTableViewCell.swift; sourceTree = "<group>"; };
 		582D8BBE2A93429A00838975 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		582D8BC12A934BB900838975 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
@@ -105,6 +116,9 @@
 		5835E0602A8A215000C260C7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		5835E0632A8A2A0000C260C7 /* IAPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPService.swift; sourceTree = "<group>"; };
 		5835E0652A8A6E6D00C260C7 /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
+		583D30662ABEE6A300E99FBA /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		583D30682ABEE6D400E99FBA /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		586061D42AC1511900FE2733 /* PopUpTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpTestViewController.swift; sourceTree = "<group>"; };
 		5863DE322A83D0C500408513 /* MVVM-Framework-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-Framework-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5863DE352A83D0C500408513 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5863DE372A83D0C500408513 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +141,9 @@
 		587B6F1F2A88F672000840D1 /* TestRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRootViewController.swift; sourceTree = "<group>"; };
 		589A663B2A909A45000600AB /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		589B29B52AA067A700A4B463 /* InstagramShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramShareViewController.swift; sourceTree = "<group>"; };
+		589E78522AAF697900BB9213 /* Loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Loading.json; sourceTree = "<group>"; };
+		589E78542AAF6B2400BB9213 /* sampleLoading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sampleLoading.json; sourceTree = "<group>"; };
+		58B7351A2AA4E9D0007485F7 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		58E3A1082AA0803E0091ADC0 /* MetaConfigurationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaConfigurationService.swift; sourceTree = "<group>"; };
 		58E3A10A2AA090900091ADC0 /* UICollectionViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+.swift"; sourceTree = "<group>"; };
 		58FA94F02A83DF57008BBE4F /* MyFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MyFramework.xcodeproj; path = ../MyFramework/MyFramework.xcodeproj; sourceTree = "<group>"; };
@@ -142,6 +159,7 @@
 				586E7D582A9115AE00DCF894 /* Moya in Frameworks */,
 				583B182A2A8400C0000D1AB4 /* RxRelay in Frameworks */,
 				58FA950A2A83DF93008BBE4F /* Then in Frameworks */,
+				589E78502AAF68B100BB9213 /* Lottie in Frameworks */,
 				58FA95072A83DF88008BBE4F /* SnapKit in Frameworks */,
 				586E7D5A2A9115AE00DCF894 /* RxMoya in Frameworks */,
 				583B18282A8400C0000D1AB4 /* RxCocoa in Frameworks */,
@@ -171,8 +189,10 @@
 		5804ADB02A87D1A600CA66C5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				583D30652ABEE69500E99FBA /* Base */,
 				582D8BB82A931DDD00838975 /* Moya */,
 				582D8BB72A931DD200838975 /* Photos */,
+				583D30682ABEE6D400E99FBA /* TestView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				581915A32A925EDD00E25864 /* MoyaRxViewModel.swift */,
+				581BAB0A2AAAF4EB002FAB0C /* CocoaTestViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -220,6 +241,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		583D30652ABEE69500E99FBA /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				583D30662ABEE6A300E99FBA /* BaseView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		5863DE292A83D0C500408513 = {
 			isa = PBXGroup;
 			children = (
@@ -244,16 +273,16 @@
 		5863DE342A83D0C500408513 /* MVVM-Framework-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				581915A22A925EBF00E25864 /* ViewModels */,
 				586E7D512A90A1B400DCF894 /* Util */,
+				5804ADB12A87D1AF00CA66C5 /* Models */,
+				5804ADB02A87D1A600CA66C5 /* Views */,
+				5863DE692A83D12B00408513 /* Controllers */,
+				581915A22A925EBF00E25864 /* ViewModels */,
 				589A663A2A909A2F000600AB /* APIService */,
 				5835E0622A8A29EF00C260C7 /* Services */,
 				5835E05F2A8A213800C260C7 /* MVVM-Framework-iOS.entitlements */,
-				5804ADB12A87D1AF00CA66C5 /* Models */,
-				5804ADB02A87D1A600CA66C5 /* Views */,
 				5863DE672A83D10A00408513 /* AppDelegate */,
 				5863DE682A83D11D00408513 /* Resources */,
-				5863DE692A83D12B00408513 /* Controllers */,
 			);
 			path = "MVVM-Framework-iOS";
 			sourceTree = "<group>";
@@ -287,6 +316,7 @@
 		5863DE682A83D11D00408513 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				589E78512AAF696C00BB9213 /* Lotties */,
 				5863DE3E2A83D0C600408513 /* Assets.xcassets */,
 				5863DE402A83D0C600408513 /* LaunchScreen.storyboard */,
 				5863DE432A83D0C600408513 /* Info.plist */,
@@ -303,6 +333,7 @@
 				5835E0652A8A6E6D00C260C7 /* PurchaseViewController.swift */,
 				589B29B52AA067A700A4B463 /* InstagramShareViewController.swift */,
 				5876D1112AA1DD25009BF9DA /* PoPTestViewController.swift */,
+				586061D42AC1511900FE2733 /* PopUpTestViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -314,6 +345,7 @@
 				582D8BBE2A93429A00838975 /* UIImage+.swift */,
 				582D8BC12A934BB900838975 /* CacheManager.swift */,
 				58E3A10A2AA090900091ADC0 /* UICollectionViewCell+.swift */,
+				58B7351A2AA4E9D0007485F7 /* UIView+.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -326,6 +358,16 @@
 				586E7D5B2A912B7600DCF894 /* GeneralResponse.swift */,
 			);
 			path = APIService;
+			sourceTree = "<group>";
+		};
+		589E78512AAF696C00BB9213 /* Lotties */ = {
+			isa = PBXGroup;
+			children = (
+				582BF0E12ABB4CBF0041AB89 /* testLottie.json */,
+				589E78542AAF6B2400BB9213 /* sampleLoading.json */,
+				589E78522AAF697900BB9213 /* Loading.json */,
+			);
+			path = Lotties;
 			sourceTree = "<group>";
 		};
 		58FA94EF2A83DF57008BBE4F /* Frameworks */ = {
@@ -371,6 +413,7 @@
 				583B182B2A8400C0000D1AB4 /* RxSwift */,
 				586E7D572A9115AE00DCF894 /* Moya */,
 				586E7D592A9115AE00DCF894 /* RxMoya */,
+				589E784F2AAF68B100BB9213 /* Lottie */,
 			);
 			productName = "MVVM-Framework-iOS";
 			productReference = 5863DE322A83D0C500408513 /* MVVM-Framework-iOS.app */;
@@ -455,6 +498,7 @@
 				58FA95082A83DF93008BBE4F /* XCRemoteSwiftPackageReference "Then" */,
 				583B18262A8400C0000D1AB4 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				586E7D562A9115AE00DCF894 /* XCRemoteSwiftPackageReference "Moya" */,
+				589E784E2AAF68B100BB9213 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 5863DE332A83D0C500408513 /* Products */;
 			projectDirPath = "";
@@ -497,6 +541,9 @@
 			files = (
 				5863DE422A83D0C600408513 /* LaunchScreen.storyboard in Resources */,
 				5863DE3F2A83D0C600408513 /* Assets.xcassets in Resources */,
+				589E78552AAF6B2400BB9213 /* sampleLoading.json in Resources */,
+				582BF0E22ABB4CC00041AB89 /* testLottie.json in Resources */,
+				589E78532AAF697900BB9213 /* Loading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +569,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				587B6F1E2A88F4C4000840D1 /* MoyaRxTestViewController.swift in Sources */,
+				583D30672ABEE6A300E99FBA /* BaseView.swift in Sources */,
 				5804ADB32A87D1CB00CA66C5 /* PhotoCell.swift in Sources */,
 				58E3A10B2AA090900091ADC0 /* UICollectionViewCell+.swift in Sources */,
 				58E3A1092AA0803E0091ADC0 /* MetaConfigurationService.swift in Sources */,
@@ -533,7 +581,9 @@
 				582D8BBA2A931E1D00838975 /* MoyaTestTableViewCell.swift in Sources */,
 				587B6F202A88F672000840D1 /* TestRootViewController.swift in Sources */,
 				5863DE362A83D0C500408513 /* AppDelegate.swift in Sources */,
+				58B7351B2AA4E9D0007485F7 /* UIView+.swift in Sources */,
 				586B0AE02A8B8683005841E1 /* IAPProductKey.swift in Sources */,
+				586061D52AC1511900FE2733 /* PopUpTestViewController.swift in Sources */,
 				589A663C2A909A45000600AB /* ApiService.swift in Sources */,
 				5835E0662A8A6E6D00C260C7 /* PurchaseViewController.swift in Sources */,
 				5863DE382A83D0C500408513 /* SceneDelegate.swift in Sources */,
@@ -543,6 +593,8 @@
 				587B6F172A889A71000840D1 /* HomeViewController.swift in Sources */,
 				582D8BBF2A93429A00838975 /* UIImage+.swift in Sources */,
 				587B6F1C2A88E570000840D1 /* PhotoCellCircleView.swift in Sources */,
+				583D30692ABEE6D400E99FBA /* TestView.swift in Sources */,
+				581BAB0B2AAAF4EB002FAB0C /* CocoaTestViewModel.swift in Sources */,
 				586E7D532A90A1C200DCF894 /* Encodable+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -642,7 +694,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -697,7 +749,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -723,12 +775,12 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.KyuboShim.MVVMWithIAP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -756,12 +808,12 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.KyuboShim.MVVMWithIAP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -919,6 +971,14 @@
 				minimumVersion = 15.0.0;
 			};
 		};
+		589E784E2AAF68B100BB9213 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		58FA95052A83DF88008BBE4F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -972,6 +1032,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 586E7D562A9115AE00DCF894 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = RxMoya;
+		};
+		589E784F2AAF68B100BB9213 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 589E784E2AAF68B100BB9213 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 		58FA95062A83DF88008BBE4F /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;

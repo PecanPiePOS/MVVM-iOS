@@ -14,6 +14,7 @@
 		583B18372A8402F9000D1AB4 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 583B18362A8402F9000D1AB4 /* RxRelay */; };
 		583B18392A8402F9000D1AB4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 583B18382A8402F9000D1AB4 /* RxSwift */; };
 		583B183C2A840306000D1AB4 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 583B183B2A840306000D1AB4 /* RxTest */; };
+		58BFBB442AADB1CF004A84E8 /* MailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BFBB432AADB1CF004A84E8 /* MailManager.swift */; };
 		58FA94DE2A83DEE7008BBE4F /* MyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FA94D52A83DEE7008BBE4F /* MyFramework.framework */; };
 		58FA94E32A83DEE7008BBE4F /* MyFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FA94E22A83DEE7008BBE4F /* MyFrameworkTests.swift */; };
 		58FA94E42A83DEE7008BBE4F /* MyFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 58FA94D82A83DEE7008BBE4F /* MyFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,6 +35,7 @@
 		581428582A86796800949CCD /* PhotoAlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumViewModel.swift; sourceTree = "<group>"; };
 		581428612A86995C00949CCD /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		581428632A869D0200949CCD /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		58BFBB432AADB1CF004A84E8 /* MailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailManager.swift; sourceTree = "<group>"; };
 		58FA94D52A83DEE7008BBE4F /* MyFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58FA94D82A83DEE7008BBE4F /* MyFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFramework.h; sourceTree = "<group>"; };
 		58FA94DD2A83DEE7008BBE4F /* MyFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +69,7 @@
 		581428572A86793A00949CCD /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				58BFBB422AADB1C4004A84E8 /* Manager */,
 				581428602A86994400949CCD /* Model */,
 				5814285B2A86888300949CCD /* Nested */,
 				5814285A2A86887E00949CCD /* POP */,
@@ -103,6 +106,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58BFBB422AADB1C4004A84E8 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				58BFBB432AADB1CF004A84E8 /* MailManager.swift */,
+			);
+			name = Manager;
 			sourceTree = "<group>";
 		};
 		58FA94CB2A83DEE7008BBE4F = {
@@ -263,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58BFBB442AADB1CF004A84E8 /* MailManager.swift in Sources */,
 				581428622A86995C00949CCD /* Photo.swift in Sources */,
 				58FA94EE2A83DEF9008BBE4F /* TestFramework.swift in Sources */,
 				581428642A869D0200949CCD /* Activity.swift in Sources */,
@@ -340,7 +352,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -397,7 +409,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -424,7 +436,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,7 +473,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
