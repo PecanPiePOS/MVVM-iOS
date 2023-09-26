@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,16 +17,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="4y0-5R-S6i">
-                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
-                                <color key="color" systemColor="systemIndigoColor"/>
-                            </activityIndicatorView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MVVMIcon" translatesAutoresizingMaskIntoConstraints="NO" id="mXl-CY-teS">
+                                <rect key="frame" x="126.66666666666669" y="356" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="Td5-lv-9Hz"/>
+                                    <constraint firstAttribute="width" constant="140" id="tCq-pO-pbP"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
                         <constraints>
-                            <constraint firstItem="4y0-5R-S6i" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="8xR-tz-9QE"/>
-                            <constraint firstItem="4y0-5R-S6i" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="hj1-mq-tMU"/>
+                            <constraint firstItem="mXl-CY-teS" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="GC9-5a-oeC"/>
+                            <constraint firstItem="mXl-CY-teS" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="dkP-bM-59t"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,11 +39,9 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="MVVMIcon" width="1024" height="1024"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
