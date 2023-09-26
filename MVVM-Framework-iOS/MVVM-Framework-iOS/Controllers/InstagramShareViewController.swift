@@ -114,7 +114,7 @@ extension InstagramShareViewController {
 
 extension InstagramShareViewController {
     private func pushOnPresentVC() {
-        let vc = PoPTestViewController()
+        let vc = HomeViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
