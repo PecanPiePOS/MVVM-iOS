@@ -16,29 +16,18 @@ import Then
 
 final class TestRootViewController: MailManager {
     
-    private let testView = TestView()
+    private let versionManager = VersionManager()
     private let viewModel = CocoaTestViewModel()
     private var disposeBag = DisposeBag()
     private var count = 0
     private var isTrueObservable = BehaviorRelay(value: true)
+    private let latestVersionLabel = UILabel()
+    private let gerwhngreg = UIView()
     
     private let loadingView = LottieAnimationView(name: "testLottie")
     private lazy var toHomeButton = UIButton(frame: .zero, primaryAction: UIAction(handler: { [weak self] _ in
         let vc = HomeViewController()
         self?.navigationController?.pushViewController(vc, animated: true)
-        
-        if let kkk = UserDefaults.standard.string(forKey: "Hi") {
-            print(kkk)
-        } else {
-            print("nil")
-        }
-        
-        if let ooo = UserDefaults.standard.string(forKey: "Hey") {
-            print(ooo)
-        } else {
-            print("nilllll")
-        }
-        
     }))
     private lazy var toInstaShareButton = UIButton()
 //        frame: .zero, primaryAction: UIAction(handler: { [weak self] _ in
@@ -46,45 +35,22 @@ final class TestRootViewController: MailManager {
 //        let nav = UINavigationController(rootViewController: vc)
 //        nav.modalPresentationStyle = .overFullScreen
 //        self?.present(nav, animated: true)
-        
-//        guard let settingUrl = URL(string: UIApplication.openSettingsURLString) else { return }
-//        let alert = UIAlertController(title: "기기의 Mail에 먼저 로그인 해주세요.", message: "설정에서 Apple 로그인을 해주세요.", preferredStyle: .alert)
-//        let moveToDeviceSettingAction = UIAlertAction(title: "설정", style: .default) { _ in
-//            UIApplication.shared.open(settingUrl)
-//        }
-//        let cancelAction = UIAlertAction(title: "취소", style: .cancel)
-//        
-//        alert.addAction(moveToDeviceSettingAction)
-//        alert.addAction(cancelAction)
-//        alert.preferredAction = moveToDeviceSettingAction
-//        self?.present(alert, animated: true)
-//        
-//        if let bundleId = Bundle.main.bundleIdentifier {
-//            print(bundleId)
-//            UserDefaults.standard.removePersistentDomain(forName: bundleId)
-//        } else {
-//            print("Damn.")
-//        }
-        
-//    }))
+
     private let testToggle = UISwitch()
     private lazy var emailButton = TestButtonForIncreaseTappingArea()
-//    (frame: .zero, primaryAction: UIAction(handler: { [weak self] _ in
-//        self?.sendFeedbackMail(userOf: "게일")
-//    }))
     
     // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String)
-        print(UIDevice.current.name)
-        
-        UserDefaults.standard.set("Hello", forKey: "Hi")
-        
         bind()
         
         view.backgroundColor = .yellow
+        
+        latestVersionLabel.do {
+            $0.textColor = .black
+            $0.font = .systemFont(ofSize: 20, weight: .semibold)
+        }
         
         loadingView.do {
             $0.loopMode = .autoReverse
@@ -121,17 +87,15 @@ final class TestRootViewController: MailManager {
             $0.backgroundColor = .red
         }
         
-//        view.addSubview(loadingView)
+        view.addSubview(latestVersionLabel)
         view.addSubview(toHomeButton)
         view.addSubview(toInstaShareButton)
         view.addSubview(testToggle)
         view.addSubview(emailButton)
-        view.addSubview(testView)
-
-        testView.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(70)
+        
+        latestVersionLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
-            $0.size.equalTo(500)
+            $0.top.equalToSuperview().inset(200)
         }
         
         toHomeButton.snp.makeConstraints {
@@ -156,23 +120,15 @@ final class TestRootViewController: MailManager {
         }
         
         checkAbnormalDevice()
-        print("3️⃣")
-        
-//        DispatchQueue.global().asyncAfter(deadline: .now() + 3) { [weak self] in
-//            DispatchQueue.main.async {
-//                print("STOP!")
-//                self?.loadingView.stop()
-//            }
-//        }
+        Task {
+            guard let pp = await versionManager.shouldUpdate() else { return }
+            self.latestVersionLabel.text = pp.latestVersion
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("AAAAAA")
-    }
-    
-    private func printLALA() {
-        print("aaaaaaa")
+        print("ViewDidAppear")
     }
     
     private func checkAbnormalDevice() {
@@ -192,13 +148,14 @@ final class TestRootViewController: MailManager {
     }
     
     private func bind() {
+        
+        let kkkk = gerwhngreg as! tttt
+        
         emailButton.rx.tap.asDriver()
-//            .debounce(.seconds(2))
-            .throttle(.seconds(3), latest: false)
+            .debounce(.seconds(2))
             .drive(onNext: { _ in
                 self.count += 1
                 print("🌸", self.count)
-                self.testView.removeFromSuperview()
             })
             .disposed(by: disposeBag)
         
@@ -275,4 +232,8 @@ class TestButtonForIncreaseTappingArea: UIButton {
     override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
         return bounds.insetBy(dx: -10, dy: -10).contains(point)
     }
+}
+
+final class tttt: UIView {
+    
 }
