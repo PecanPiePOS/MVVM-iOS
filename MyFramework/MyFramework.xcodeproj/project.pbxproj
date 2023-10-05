@@ -10,10 +10,10 @@
 		581428592A86796800949CCD /* PhotoAlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581428582A86796800949CCD /* PhotoAlbumViewModel.swift */; };
 		581428622A86995C00949CCD /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581428612A86995C00949CCD /* Photo.swift */; };
 		581428642A869D0200949CCD /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581428632A869D0200949CCD /* Activity.swift */; };
-		583B18352A8402F9000D1AB4 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 583B18342A8402F9000D1AB4 /* RxCocoa */; };
-		583B18372A8402F9000D1AB4 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 583B18362A8402F9000D1AB4 /* RxRelay */; };
-		583B18392A8402F9000D1AB4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 583B18382A8402F9000D1AB4 /* RxSwift */; };
-		583B183C2A840306000D1AB4 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 583B183B2A840306000D1AB4 /* RxTest */; };
+		586008472ACD1B6300F232F8 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 586008462ACD1B6300F232F8 /* RxCocoa */; };
+		586008492ACD1B6300F232F8 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 586008482ACD1B6300F232F8 /* RxRelay */; };
+		5860084B2ACD1B6300F232F8 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5860084A2ACD1B6300F232F8 /* RxSwift */; };
+		5860084D2ACD1B6300F232F8 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 5860084C2ACD1B6300F232F8 /* RxTest */; };
 		58BFBB442AADB1CF004A84E8 /* MailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BFBB432AADB1CF004A84E8 /* MailManager.swift */; };
 		58FA94DE2A83DEE7008BBE4F /* MyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FA94D52A83DEE7008BBE4F /* MyFramework.framework */; };
 		58FA94E32A83DEE7008BBE4F /* MyFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FA94E22A83DEE7008BBE4F /* MyFrameworkTests.swift */; };
@@ -48,9 +48,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				583B18392A8402F9000D1AB4 /* RxSwift in Frameworks */,
-				583B18372A8402F9000D1AB4 /* RxRelay in Frameworks */,
-				583B18352A8402F9000D1AB4 /* RxCocoa in Frameworks */,
+				5860084B2ACD1B6300F232F8 /* RxSwift in Frameworks */,
+				586008492ACD1B6300F232F8 /* RxRelay in Frameworks */,
+				586008472ACD1B6300F232F8 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				583B183C2A840306000D1AB4 /* RxTest in Frameworks */,
+				5860084D2ACD1B6300F232F8 /* RxTest in Frameworks */,
 				58FA94DE2A83DEE7008BBE4F /* MyFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,9 +182,9 @@
 			);
 			name = MyFramework;
 			packageProductDependencies = (
-				583B18342A8402F9000D1AB4 /* RxCocoa */,
-				583B18362A8402F9000D1AB4 /* RxRelay */,
-				583B18382A8402F9000D1AB4 /* RxSwift */,
+				586008462ACD1B6300F232F8 /* RxCocoa */,
+				586008482ACD1B6300F232F8 /* RxRelay */,
+				5860084A2ACD1B6300F232F8 /* RxSwift */,
 			);
 			productName = MyFramework;
 			productReference = 58FA94D52A83DEE7008BBE4F /* MyFramework.framework */;
@@ -205,7 +205,7 @@
 			);
 			name = MyFrameworkTests;
 			packageProductDependencies = (
-				583B183B2A840306000D1AB4 /* RxTest */,
+				5860084C2ACD1B6300F232F8 /* RxTest */,
 			);
 			productName = MyFrameworkTests;
 			productReference = 58FA94DD2A83DEE7008BBE4F /* MyFrameworkTests.xctest */;
@@ -219,7 +219,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					58FA94D42A83DEE7008BBE4F = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -240,7 +240,7 @@
 			);
 			mainGroup = 58FA94CB2A83DEE7008BBE4F;
 			packageReferences = (
-				583B18332A8402F9000D1AB4 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				586008452ACD1B6300F232F8 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 58FA94D62A83DEE7008BBE4F /* Products */;
 			projectDirPath = "";
@@ -338,6 +338,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -352,7 +353,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -401,6 +402,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -409,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -425,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -462,6 +465,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -561,35 +565,35 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		583B18332A8402F9000D1AB4 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		586008452ACD1B6300F232F8 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
+				minimumVersion = 6.6.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		583B18342A8402F9000D1AB4 /* RxCocoa */ = {
+		586008462ACD1B6300F232F8 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 583B18332A8402F9000D1AB4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 586008452ACD1B6300F232F8 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
 		};
-		583B18362A8402F9000D1AB4 /* RxRelay */ = {
+		586008482ACD1B6300F232F8 /* RxRelay */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 583B18332A8402F9000D1AB4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 586008452ACD1B6300F232F8 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxRelay;
 		};
-		583B18382A8402F9000D1AB4 /* RxSwift */ = {
+		5860084A2ACD1B6300F232F8 /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 583B18332A8402F9000D1AB4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 586008452ACD1B6300F232F8 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
 		};
-		583B183B2A840306000D1AB4 /* RxTest */ = {
+		5860084C2ACD1B6300F232F8 /* RxTest */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 583B18332A8402F9000D1AB4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 586008452ACD1B6300F232F8 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxTest;
 		};
 /* End XCSwiftPackageProductDependency section */

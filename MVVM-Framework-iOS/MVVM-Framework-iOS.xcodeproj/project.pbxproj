@@ -11,6 +11,7 @@
 		5804ADB52A87D1DB00CA66C5 /* DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5804ADB42A87D1DB00CA66C5 /* DTO.swift */; };
 		581915A42A925EDD00E25864 /* MoyaRxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581915A32A925EDD00E25864 /* MoyaRxViewModel.swift */; };
 		581BAB0B2AAAF4EB002FAB0C /* CocoaTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581BAB0A2AAAF4EB002FAB0C /* CocoaTestViewModel.swift */; };
+		5823BA122ACD3BB0003DBEF9 /* VersionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5823BA112ACD3BB0003DBEF9 /* VersionManager.swift */; };
 		582BF0E22ABB4CC00041AB89 /* testLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 582BF0E12ABB4CBF0041AB89 /* testLottie.json */; };
 		582D8BBA2A931E1D00838975 /* MoyaTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D8BB92A931E1D00838975 /* MoyaTestTableViewCell.swift */; };
 		582D8BBF2A93429A00838975 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D8BBE2A93429A00838975 /* UIImage+.swift */; };
@@ -25,7 +26,6 @@
 		583B18322A84018F000D1AB4 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 583B18312A84018F000D1AB4 /* RxTest */; };
 		583D30672ABEE6A300E99FBA /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583D30662ABEE6A300E99FBA /* BaseView.swift */; };
 		583D30692ABEE6D400E99FBA /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583D30682ABEE6D400E99FBA /* TestView.swift */; };
-		586061D52AC1511900FE2733 /* PopUpTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586061D42AC1511900FE2733 /* PopUpTestViewController.swift */; };
 		5863DE362A83D0C500408513 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5863DE352A83D0C500408513 /* AppDelegate.swift */; };
 		5863DE382A83D0C500408513 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5863DE372A83D0C500408513 /* SceneDelegate.swift */; };
 		5863DE3F2A83D0C600408513 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5863DE3E2A83D0C600408513 /* Assets.xcassets */; };
@@ -39,7 +39,6 @@
 		586E7D582A9115AE00DCF894 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 586E7D572A9115AE00DCF894 /* Moya */; };
 		586E7D5A2A9115AE00DCF894 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 586E7D592A9115AE00DCF894 /* RxMoya */; };
 		586E7D5C2A912B7600DCF894 /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586E7D5B2A912B7600DCF894 /* GeneralResponse.swift */; };
-		5876D1122AA1DD25009BF9DA /* PoPTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5876D1112AA1DD25009BF9DA /* PoPTestViewController.swift */; };
 		587B6F172A889A71000840D1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B6F162A889A71000840D1 /* HomeViewController.swift */; };
 		587B6F1C2A88E570000840D1 /* PhotoCellCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B6F1B2A88E570000840D1 /* PhotoCellCircleView.swift */; };
 		587B6F1E2A88F4C4000840D1 /* MoyaRxTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B6F1D2A88F4C4000840D1 /* MoyaRxTestViewController.swift */; };
@@ -108,6 +107,7 @@
 		5804ADB42A87D1DB00CA66C5 /* DTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTO.swift; sourceTree = "<group>"; };
 		581915A32A925EDD00E25864 /* MoyaRxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaRxViewModel.swift; sourceTree = "<group>"; };
 		581BAB0A2AAAF4EB002FAB0C /* CocoaTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoaTestViewModel.swift; sourceTree = "<group>"; };
+		5823BA112ACD3BB0003DBEF9 /* VersionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionManager.swift; sourceTree = "<group>"; };
 		582BF0E12ABB4CBF0041AB89 /* testLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testLottie.json; sourceTree = "<group>"; };
 		582D8BB92A931E1D00838975 /* MoyaTestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaTestTableViewCell.swift; sourceTree = "<group>"; };
 		582D8BBE2A93429A00838975 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
@@ -118,7 +118,6 @@
 		5835E0652A8A6E6D00C260C7 /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 		583D30662ABEE6A300E99FBA /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		583D30682ABEE6D400E99FBA /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
-		586061D42AC1511900FE2733 /* PopUpTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpTestViewController.swift; sourceTree = "<group>"; };
 		5863DE322A83D0C500408513 /* MVVM-Framework-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-Framework-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5863DE352A83D0C500408513 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5863DE372A83D0C500408513 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,7 +133,6 @@
 		586E7D522A90A1C200DCF894 /* Encodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
 		586E7D542A9114A900DCF894 /* PlugginType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlugginType.swift; sourceTree = "<group>"; };
 		586E7D5B2A912B7600DCF894 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
-		5876D1112AA1DD25009BF9DA /* PoPTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoPTestViewController.swift; sourceTree = "<group>"; };
 		587B6F162A889A71000840D1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		587B6F1B2A88E570000840D1 /* PhotoCellCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCellCircleView.swift; sourceTree = "<group>"; };
 		587B6F1D2A88F4C4000840D1 /* MoyaRxTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaRxTestViewController.swift; sourceTree = "<group>"; };
@@ -237,6 +235,7 @@
 			children = (
 				5835E0632A8A2A0000C260C7 /* IAPService.swift */,
 				58E3A1082AA0803E0091ADC0 /* MetaConfigurationService.swift */,
+				5823BA112ACD3BB0003DBEF9 /* VersionManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -332,8 +331,6 @@
 				587B6F1F2A88F672000840D1 /* TestRootViewController.swift */,
 				5835E0652A8A6E6D00C260C7 /* PurchaseViewController.swift */,
 				589B29B52AA067A700A4B463 /* InstagramShareViewController.swift */,
-				5876D1112AA1DD25009BF9DA /* PoPTestViewController.swift */,
-				586061D42AC1511900FE2733 /* PopUpTestViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -572,18 +569,17 @@
 				583D30672ABEE6A300E99FBA /* BaseView.swift in Sources */,
 				5804ADB32A87D1CB00CA66C5 /* PhotoCell.swift in Sources */,
 				58E3A10B2AA090900091ADC0 /* UICollectionViewCell+.swift in Sources */,
+				5823BA122ACD3BB0003DBEF9 /* VersionManager.swift in Sources */,
 				58E3A1092AA0803E0091ADC0 /* MetaConfigurationService.swift in Sources */,
 				586E7D552A9114A900DCF894 /* PlugginType.swift in Sources */,
 				5835E0642A8A2A0000C260C7 /* IAPService.swift in Sources */,
 				586E7D5C2A912B7600DCF894 /* GeneralResponse.swift in Sources */,
-				5876D1122AA1DD25009BF9DA /* PoPTestViewController.swift in Sources */,
 				589B29B62AA067A700A4B463 /* InstagramShareViewController.swift in Sources */,
 				582D8BBA2A931E1D00838975 /* MoyaTestTableViewCell.swift in Sources */,
 				587B6F202A88F672000840D1 /* TestRootViewController.swift in Sources */,
 				5863DE362A83D0C500408513 /* AppDelegate.swift in Sources */,
 				58B7351B2AA4E9D0007485F7 /* UIView+.swift in Sources */,
 				586B0AE02A8B8683005841E1 /* IAPProductKey.swift in Sources */,
-				586061D52AC1511900FE2733 /* PopUpTestViewController.swift in Sources */,
 				589A663C2A909A45000600AB /* ApiService.swift in Sources */,
 				5835E0662A8A6E6D00C260C7 /* PurchaseViewController.swift in Sources */,
 				5863DE382A83D0C500408513 /* SceneDelegate.swift in Sources */,
@@ -775,7 +771,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -808,7 +804,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
