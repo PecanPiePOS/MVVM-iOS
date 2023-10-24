@@ -37,8 +37,7 @@ final class HomeViewController: UIViewController {
     }
     
     deinit {
-        print(self.className)
-        disposeBag = DisposeBag()
+        print(self.className, "🚩")
     }
 }
 
@@ -48,6 +47,10 @@ extension HomeViewController {
         self.viewModel.outputs.photoAlbumLists
             .bind(to: collectionView.rx.items(cellIdentifier: "photoCell", cellType: PhotoCell.self))
             { row, element, cell in
+                print(row, "🍕")
+                if row == 7 {
+                    print("what?")
+                }
                 cell.configure(imageOf: element)
                 cell.delegate = self
             }
