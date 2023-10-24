@@ -27,7 +27,16 @@ final class TestRootViewController: MailManager {
     private let loadingView = LottieAnimationView(name: "testLottie")
     private lazy var toHomeButton = UIButton(frame: .zero, primaryAction: UIAction(handler: { [weak self] _ in
         let vc = HomeViewController()
-        self?.navigationController?.pushViewController(vc, animated: true)
+        let vcNavi = UINavigationController(rootViewController: vc)
+//        self?.navigationController?.initRootViewController(vc: vc)
+//        
+//        self?.navigationController?.pushViewController(vc, animated: true)
+
+        let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as! SceneDelegate
+        
+        sceneDelegate.window?.rootViewController = vcNavi
+        sceneDelegate.window?.makeKeyAndVisible()
+        
     }))
     private lazy var toInstaShareButton = UIButton()
 //        frame: .zero, primaryAction: UIAction(handler: { [weak self] _ in
@@ -148,9 +157,7 @@ final class TestRootViewController: MailManager {
     }
     
     private func bind() {
-        
-        let kkkk = gerwhngreg as! tttt
-        
+                
         emailButton.rx.tap.asDriver()
             .debounce(.seconds(2))
             .drive(onNext: { _ in
@@ -173,7 +180,7 @@ final class TestRootViewController: MailManager {
     }
     
     deinit {
-        print("IAP VC Out")
+        print("IAP VC Out ❗️❗️❗️❗️❗️❗️")
     }
 }
 
@@ -234,6 +241,30 @@ class TestButtonForIncreaseTappingArea: UIButton {
     }
 }
 
-final class tttt: UIView {
-    
+extension UINavigationController {
+/**
+ It removes all view controllers from navigation controller then set the new root view controller and it pops.
+ 
+ - parameter vc: root view controller to set a new
+ */
+func initRootViewController(vc: UIViewController, transitionType type: String = kCATransition, duration: CFTimeInterval = 0.3) {
+    self.addTransition(transitionType: type, duration: duration)
+    self.viewControllers.removeAll()
+    self.pushViewController(vc, animated: false)
+    self.popToRootViewController(animated: false)
 }
+
+/**
+ It adds the animation of navigation flow.
+ 
+ - parameter type: kCATransitionType, it means style of animation
+ - parameter duration: CFTimeInterval, duration of animation
+ */
+private func addTransition(transitionType type: String = kCATransition, duration: CFTimeInterval = 0.1) {
+    let transition = CATransition()
+    transition.duration = duration
+    transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.default)
+    transition.type = CATransitionType.moveIn
+    
+    self.view.layer.add(transition, forKey: nil)
+}}
