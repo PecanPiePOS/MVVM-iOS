@@ -38,7 +38,7 @@ final class MoyaRxTestViewController: UIViewController {
     }
     
     deinit {
-        print("MoyaRxTestVC OUT")
+        print(self.className, "🚩")
     }
     
     private func setViewModel() {
